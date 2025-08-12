@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Create Private Subnet :: AWS System Manager</title>
+    <title>Setting up API Gateway :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1755017725" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1755017725" rel="stylesheet">
-    <link href="/css/hybrid.css?1755017725" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1755017725" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1755017725" rel="stylesheet">
-    <link href="/css/auto-complete.css?1755017725" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1755017725" rel="stylesheet">
-    <link href="/css/theme.css?1755017725" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1755017725" rel="stylesheet">
+    <link href="/css/nucleus.css?1755017405" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1755017405" rel="stylesheet">
+    <link href="/css/hybrid.css?1755017405" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1755017405" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1755017405" rel="stylesheet">
+    <link href="/css/auto-complete.css?1755017405" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1755017405" rel="stylesheet">
+    <link href="/css/theme.css?1755017405" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1755017405" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1755017725" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1755017405" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1755017725"></script>
+    <script src="/js/jquery-3.3.1.min.js?1755017405"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">
+  <body class="" data-url="/5-portfwd/5.1-api-gateway/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1755017725"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1755017725"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1755017405"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1755017405"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1755017725"></script>
+<script type="text/javascript" src="/js/search.js?1755017405"></script>
 
     
   </div>
@@ -109,7 +109,7 @@
   
     
     <li data-nav-id="/2-prerequiste/" title="CDK Infrastructure Setup" class="dd-item 
-        parent
+        
         
         
         ">
@@ -140,7 +140,7 @@
   
     
     <li data-nav-id="/2-prerequiste/2.1-createec2/" title="Preparing Container Infrastructure" class="dd-item 
-        parent
+        
         
         
         ">
@@ -227,8 +227,8 @@
   
     
     <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/" title="Create Private Subnet" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">
@@ -727,13 +727,13 @@
  
   
     
-    <li data-nav-id="/4-s3log/4.2-creates3bucket/" title="Setting up API Gateway" class="dd-item 
+    <li data-nav-id="/4-s3log/4.2-creates3bucket/" title="Create S3 Bucket" class="dd-item 
         
         
         
         ">
       <a href="/4-s3log/4.2-creates3bucket/">
-           <b> 4.2 </b> Setting up API Gateway
+           <b> 4.2 </b> Create S3 Bucket
           
             <i class="fas fa-check read-icon"></i>
           
@@ -819,7 +819,7 @@
   
     
     <li data-nav-id="/5-portfwd/" title="Clean up resources" class="dd-item 
-        
+        parent
         
         
         ">
@@ -830,6 +830,46 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-portfwd/5.1-api-gateway/" title="Setting up API Gateway" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/5-portfwd/5.1-api-gateway/">
+           <b> 5.1 </b> Setting up API Gateway
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -871,7 +911,7 @@
                   
                     
                     
-                      <option id="en" value="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/" selected>English</option>
+                      <option id="en" value="/5-portfwd/5.1-api-gateway/" selected>English</option>
                     
                   
               
@@ -885,7 +925,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/5-portfwd/5.1-api-gateway/">Tiếng Việt</option>
                     
                   
               
@@ -977,13 +1017,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>E-commerce Microservices on AWS</a> > <a href='/2-prerequiste/'>CDK Infrastructure Setup</a> > <a href='/2-prerequiste/2.1-createec2/'>Preparing Container Infrastructure</a> > Create Private Subnet
-          
-        
+            <a href='/'>E-commerce Microservices on AWS</a> > <a href='/5-portfwd/'>Clean up resources</a> > Setting up API Gateway
           
         
           
@@ -998,9 +1032,15 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#api-gateway-configuration-for-e-commerce-microservices">API Gateway Configuration for E-commerce Microservices</a>
       <ul>
-        <li></li>
+        <li><a href="#architecture-overview">Architecture Overview</a></li>
+        <li><a href="#api-gateway-routes">API Gateway Routes</a></li>
+        <li><a href="#implementation-steps">Implementation Steps</a></li>
+        <li><a href="#environment-variables">Environment Variables</a></li>
+        <li><a href="#testing-the-api-gateway">Testing the API Gateway</a></li>
+        <li><a href="#monitoring-and-logging">Monitoring and Logging</a></li>
+        <li><a href="#security-best-practices">Security Best Practices</a></li>
       </ul>
     </li>
   </ul>
@@ -1020,7 +1060,7 @@
           
             <h1>
               
-              Create Private Subnet
+              Setting up API Gateway
             </h1>
           
 
@@ -1028,30 +1068,135 @@
 
 
 
-	<h4 id="create-private-subnet">Create Private Subnet</h4>
+	<h2 id="api-gateway-configuration-for-e-commerce-microservices">API Gateway Configuration for E-commerce Microservices</h2>
+<p>In this section, we&rsquo;ll configure Amazon API Gateway as the single entry point for our e-commerce microservices system. The API Gateway will route requests to the appropriate microservices and provide centralized authentication, authorization, and monitoring.</p>
+<h3 id="architecture-overview">Architecture Overview</h3>
+<p>Our API Gateway will handle requests for all microservices:</p>
+<pre tabindex="0"><code>Client → API Gateway → [Supplier Service | Consumer Service | Inventory Service | Product Service | Payment Service | Order Service]
+</code></pre><h3 id="api-gateway-routes">API Gateway Routes</h3>
+<h4 id="1-supplier-service-routes">1. Supplier Service Routes</h4>
+<ul>
+<li><code>GET /api/v1/suppliers</code> - List all suppliers</li>
+<li><code>GET /api/v1/suppliers/{id}</code> - Get supplier details</li>
+<li><code>POST /api/v1/suppliers</code> - Create new supplier</li>
+<li><code>PUT /api/v1/suppliers/{id}</code> - Update supplier</li>
+<li><code>DELETE /api/v1/suppliers/{id}</code> - Delete supplier</li>
+</ul>
+<h4 id="2-consumer-service-routes">2. Consumer Service Routes</h4>
+<ul>
+<li><code>GET /api/v1/consumers</code> - List consumers</li>
+<li><code>GET /api/v1/consumers/{id}</code> - Get consumer profile</li>
+<li><code>POST /api/v1/consumers</code> - Register new consumer</li>
+<li><code>PUT /api/v1/consumers/{id}</code> - Update consumer profile</li>
+</ul>
+<h4 id="3-product-service-routes">3. Product Service Routes</h4>
+<ul>
+<li><code>GET /api/v1/products</code> - List products with pagination</li>
+<li><code>GET /api/v1/products/{id}</code> - Get product details</li>
+<li><code>GET /api/v1/products/category/{category}</code> - Get products by category</li>
+<li><code>POST /api/v1/products</code> - Create new product (admin only)</li>
+</ul>
+<h4 id="4-inventory-service-routes">4. Inventory Service Routes</h4>
+<ul>
+<li><code>GET /api/v1/inventory/{productId}</code> - Check product availability</li>
+<li><code>POST /api/v1/inventory/reserve</code> - Reserve inventory</li>
+<li><code>POST /api/v1/inventory/release</code> - Release reserved inventory</li>
+</ul>
+<h4 id="5-order-service-routes">5. Order Service Routes</h4>
+<ul>
+<li><code>GET /api/v1/orders</code> - Get user orders</li>
+<li><code>GET /api/v1/orders/{id}</code> - Get order details</li>
+<li><code>POST /api/v1/orders</code> - Create new order</li>
+<li><code>PUT /api/v1/orders/{id}/status</code> - Update order status</li>
+</ul>
+<h4 id="6-payment-service-routes">6. Payment Service Routes</h4>
+<ul>
+<li><code>POST /api/v1/payments</code> - Process payment</li>
+<li><code>GET /api/v1/payments/{id}</code> - Get payment status</li>
+<li><code>POST /api/v1/payments/{id}/refund</code> - Process refund</li>
+</ul>
+<h3 id="implementation-steps">Implementation Steps</h3>
+<h4 id="step-1-create-api-gateway">Step 1: Create API Gateway</h4>
 <ol>
-<li>Click <strong>Subnets</strong>.
+<li>Go to <a href="https://console.aws.amazon.com/apigateway/">API Gateway Console</a></li>
+<li>Click <strong>Create API</strong></li>
+<li>Choose <strong>REST API</strong> → <strong>Build</strong></li>
+<li>Set <strong>API name</strong>: <code>ecommerce-microservices-api</code></li>
+<li>Set <strong>Description</strong>: <code>API Gateway for E-commerce Microservices</code></li>
+<li>Click <strong>Create API</strong></li>
+</ol>
+<h4 id="step-2-configure-cors">Step 2: Configure CORS</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#e6db74">&#34;origin&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;*&#34;</span>,
+  <span style="color:#e6db74">&#34;methods&#34;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;POST&#34;</span>, <span style="color:#e6db74">&#34;PUT&#34;</span>, <span style="color:#e6db74">&#34;DELETE&#34;</span>, <span style="color:#e6db74">&#34;OPTIONS&#34;</span>],
+  <span style="color:#e6db74">&#34;headers&#34;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;Content-Type&#34;</span>, <span style="color:#e6db74">&#34;Authorization&#34;</span>, <span style="color:#e6db74">&#34;X-Amz-Date&#34;</span>, <span style="color:#e6db74">&#34;X-Api-Key&#34;</span>]
+}
+</code></pre></div><h4 id="step-3-create-resource-structure">Step 3: Create Resource Structure</h4>
+<p>Create the following resource hierarchy:</p>
+<pre tabindex="0"><code>/
+├── api
+    └── v1
+        ├── suppliers
+        ├── consumers  
+        ├── products
+        ├── inventory
+        ├── orders
+        └── payments
+</code></pre><h4 id="step-4-configure-service-integration">Step 4: Configure Service Integration</h4>
+<p>For each service, configure:</p>
 <ul>
-<li>Click <strong>Create subnet</strong>.</li>
+<li><strong>Integration Type</strong>: HTTP Proxy</li>
+<li><strong>HTTP Method</strong>: ANY</li>
+<li><strong>Endpoint URL</strong>: <code>http://{service-load-balancer-dns}/{proxy}</code></li>
+<li><strong>Content Handling</strong>: Passthrough</li>
 </ul>
-</li>
+<h4 id="step-5-setup-authentication">Step 5: Setup Authentication</h4>
+<p>Configure AWS Cognito User Pool:</p>
+<ol>
+<li>Create Cognito User Pool for customer authentication</li>
+<li>Create App Client for API access</li>
+<li>Configure API Gateway Authorizer</li>
+<li>Apply authorizer to protected endpoints</li>
 </ol>
-<p><img src="/images/2.prerequisite/017-createsubnet.png" alt="VPC"></p>
-<ol start="2">
-<li>At the <strong>Create subnet</strong> page.
+<h3 id="environment-variables">Environment Variables</h3>
+<p>Set up the following environment variables:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">API_GATEWAY_URL<span style="color:#f92672">=</span>https://your-api-id.execute-api.region.amazonaws.com/prod
+COGNITO_USER_POOL_ID<span style="color:#f92672">=</span>your-user-pool-id
+COGNITO_CLIENT_ID<span style="color:#f92672">=</span>your-client-id
+</code></pre></div><h3 id="testing-the-api-gateway">Testing the API Gateway</h3>
+<p>Use the following curl commands to test endpoints:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Test product listing (public endpoint)</span>
+curl -X GET <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>API_GATEWAY_URL<span style="color:#e6db74">}</span><span style="color:#e6db74">/api/v1/products&#34;</span>
+
+<span style="color:#75715e"># Test order creation (authenticated endpoint)</span>
+curl -X POST <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>API_GATEWAY_URL<span style="color:#e6db74">}</span><span style="color:#e6db74">/api/v1/orders&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  -H <span style="color:#e6db74">&#34;Authorization: Bearer </span><span style="color:#e6db74">${</span>ACCESS_TOKEN<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  -d <span style="color:#e6db74">&#39;{
+</span><span style="color:#e6db74">    &#34;customerId&#34;: &#34;12345&#34;,
+</span><span style="color:#e6db74">    &#34;items&#34;: [
+</span><span style="color:#e6db74">      {
+</span><span style="color:#e6db74">        &#34;productId&#34;: &#34;prod-001&#34;,
+</span><span style="color:#e6db74">        &#34;quantity&#34;: 2,
+</span><span style="color:#e6db74">        &#34;price&#34;: 29.99
+</span><span style="color:#e6db74">      }
+</span><span style="color:#e6db74">    ]
+</span><span style="color:#e6db74">  }&#39;</span>
+</code></pre></div><h3 id="monitoring-and-logging">Monitoring and Logging</h3>
+<p>Enable the following for API Gateway:</p>
 <ul>
-<li>In the <strong>VPC ID</strong> section, click <strong>Lab VPC</strong>.</li>
-<li>In the <strong>Subnet name</strong> field, enter <strong>Lab Private Subnet</strong>.</li>
-<li>In the <strong>Availability Zone</strong> section, select the first Availability zone.</li>
-<li>In the field <strong>IPv4 CIRD block</strong> enter <strong>10.10.2.0/24</strong>.</li>
+<li><strong>CloudWatch Logs</strong>: Detailed request/response logging</li>
+<li><strong>CloudWatch Metrics</strong>: Request count, latency, error rates</li>
+<li><strong>AWS X-Ray</strong>: Distributed tracing across microservices</li>
 </ul>
-</li>
+<h3 id="security-best-practices">Security Best Practices</h3>
+<ol>
+<li><strong>API Keys</strong>: For rate limiting and usage tracking</li>
+<li><strong>WAF Integration</strong>: Protect against common attacks</li>
+<li><strong>Resource-based Policies</strong>: Fine-grained access control</li>
+<li><strong>Request Validation</strong>: Validate request parameters and body</li>
+<li><strong>Response Caching</strong>: Improve performance and reduce backend load</li>
 </ol>
-<p><img src="/images/2.prerequisite/018-createsubnet.png" alt="VPC"></p>
-<ol start="3">
-<li>Scroll to the bottom of the page, click <strong>Create subnet</strong>.</li>
-</ol>
-<p>The next step is to create the necessary security groups for the lab.</p>
 
 
 
@@ -1111,7 +1256,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1127,7 +1271,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1142,9 +1285,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1178,7 +1318,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1194,9 +1333,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1500,6 +1636,23 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
                 
                 
 
@@ -1507,6 +1660,9 @@
                     
                     
 
+                    
+            
+        
                     
             
         
@@ -1520,10 +1676,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/" title="Create Public Subnet"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/5-portfwd/" title="Clean up resources"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Create security groups" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-introduce/" title="Introduction to Microservices Architecture" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1533,19 +1689,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1755017725"></script>
-    <script src="/js/perfect-scrollbar.min.js?1755017725"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1755017725"></script>
-    <script src="/js/jquery.sticky.js?1755017725"></script>
-    <script src="/js/featherlight.min.js?1755017725"></script>
-    <script src="/js/highlight.pack.js?1755017725"></script>
+    <script src="/js/clipboard.min.js?1755017405"></script>
+    <script src="/js/perfect-scrollbar.min.js?1755017405"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1755017405"></script>
+    <script src="/js/jquery.sticky.js?1755017405"></script>
+    <script src="/js/featherlight.min.js?1755017405"></script>
+    <script src="/js/highlight.pack.js?1755017405"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1755017725"></script>
-    <script src="/js/learn.js?1755017725"></script>
-    <script src="/js/hugo-learn.js?1755017725"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1755017405"></script>
+    <script src="/js/learn.js?1755017405"></script>
+    <script src="/js/hugo-learn.js?1755017405"></script>
 
-    <link href="/mermaid/mermaid.css?1755017725" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1755017725"></script>
+    <link href="/mermaid/mermaid.css?1755017405" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1755017405"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

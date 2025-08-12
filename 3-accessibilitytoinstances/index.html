@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Connect to EC2 servers :: AWS System Manager</title>
+    <title>Deploy Core Services :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1755014751" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1755014751" rel="stylesheet">
-    <link href="/css/hybrid.css?1755014751" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1755014751" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1755014751" rel="stylesheet">
-    <link href="/css/auto-complete.css?1755014751" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1755014751" rel="stylesheet">
-    <link href="/css/theme.css?1755014751" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1755014751" rel="stylesheet">
+    <link href="/css/nucleus.css?1755017725" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1755017725" rel="stylesheet">
+    <link href="/css/hybrid.css?1755017725" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1755017725" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1755017725" rel="stylesheet">
+    <link href="/css/auto-complete.css?1755017725" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1755017725" rel="stylesheet">
+    <link href="/css/theme.css?1755017725" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1755017725" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1755014751" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1755017725" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1755014751"></script>
+    <script src="/js/jquery-3.3.1.min.js?1755017725"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1755014751"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1755014751"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1755017725"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1755017725"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1755014751"></script>
+<script type="text/javascript" src="/js/search.js?1755017725"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-introduce/" title="Introduction" class="dd-item 
+    <li data-nav-id="/1-introduce/" title="Introduction to Microservices Architecture" class="dd-item 
         
         
         
         ">
       <a href="/1-introduce/">
-           <b> 1. </b> Introduction
+           <b> 1. </b> Introduction to Microservices Architecture
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/" title="Preparation " class="dd-item 
+    <li data-nav-id="/2-prerequiste/" title="CDK Infrastructure Setup" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/">
-           <b> 2. </b> Preparation 
+           <b> 2. </b> CDK Infrastructure Setup
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/" title="Preparing VPC and EC2" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.1-createec2/" title="Preparing Container Infrastructure" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.1-createec2/">
-           <b> 2.1 </b> Preparing VPC and EC2
+           <b> 2.1 </b> Preparing Container Infrastructure
           
             <i class="fas fa-check read-icon"></i>
           
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/3-accessibilitytoinstances/" title="Connect to EC2 servers" class="dd-item 
+    <li data-nav-id="/3-accessibilitytoinstances/" title="Deploy Core Services" class="dd-item 
         parent
         active
         
         ">
       <a href="/3-accessibilitytoinstances/">
-           <b> 3. </b> Connect to EC2 servers
+           <b> 3. </b> Deploy Core Services
           
             <i class="fas fa-check read-icon"></i>
           
@@ -668,13 +668,13 @@
  
   
     
-    <li data-nav-id="/4-s3log/" title="Manage session logs" class="dd-item 
+    <li data-nav-id="/4-s3log/" title="Service Communication &amp; Discovery" class="dd-item 
         
         
         
         ">
       <a href="/4-s3log/">
-           <b> 4. </b> Manage session logs
+           <b> 4. </b> Service Communication &amp; Discovery
           
             <i class="fas fa-check read-icon"></i>
           
@@ -727,13 +727,13 @@
  
   
     
-    <li data-nav-id="/4-s3log/4.2-creates3bucket/" title="Create S3 Bucket" class="dd-item 
+    <li data-nav-id="/4-s3log/4.2-creates3bucket/" title="Setting up API Gateway" class="dd-item 
         
         
         
         ">
       <a href="/4-s3log/4.2-creates3bucket/">
-           <b> 4.2 </b> Create S3 Bucket
+           <b> 4.2 </b> Setting up API Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -818,39 +818,13 @@
  
   
     
-    <li data-nav-id="/5-portfwd/" title="Port Forwarding" class="dd-item 
+    <li data-nav-id="/5-portfwd/" title="Clean up resources" class="dd-item 
         
         
         
         ">
       <a href="/5-portfwd/">
-           <b> 5. </b> Port Forwarding
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-cleanup/" title="Clean up resources" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/6-cleanup/">
-          <b>6. </b>Clean up resources
+           <b> 5. </b> Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -999,7 +973,7 @@
             
           
           
-            <a href='/'>Session Management</a> > Connect to EC2 servers
+            <a href='/'>E-commerce Microservices on AWS</a> > Deploy Core Services
           
         
           
@@ -1014,6 +988,11 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#core-services-overview">Core Services Overview</a></li>
+        <li><a href="#deployment-strategy">Deployment Strategy</a></li>
+        <li><a href="#cdk-service-stack-structure">CDK Service Stack Structure</a></li>
+        <li><a href="#container-image-build-process">Container Image Build Process</a></li>
+        <li><a href="#service-communication">Service Communication</a></li>
         <li><a href="#content">Content</a></li>
       </ul>
     </li>
@@ -1034,7 +1013,7 @@
           
             <h1>
               
-              Connect to EC2 servers
+              Deploy Core Services
             </h1>
           
 
@@ -1042,10 +1021,93 @@
 
 
 
-	<p>In this step, we will connect to our EC2 servers, located in both the public and private subnets.</p>
+	<p>In this section, we&rsquo;ll deploy our core microservices using the CDK infrastructure we set up. Each service will be containerized and deployed to ECS Fargate for scalable, serverless container hosting.</p>
+<h3 id="core-services-overview">Core Services Overview</h3>
+<p>Our e-commerce platform consists of six main microservices:</p>
+<ol>
+<li><strong>Product Service</strong>: Manages product catalog, categories, and pricing</li>
+<li><strong>Inventory Service</strong>: Tracks stock levels and availability</li>
+<li><strong>Order Service</strong>: Handles order lifecycle and fulfillment</li>
+<li><strong>Payment Service</strong>: Processes payments and transactions</li>
+<li><strong>Supplier Service</strong>: Manages vendor relationships and supplier data</li>
+<li><strong>Consumer Service</strong>: Handles customer profiles and preferences</li>
+</ol>
+<h3 id="deployment-strategy">Deployment Strategy</h3>
+<p>Each microservice follows a consistent deployment pattern:</p>
+<ul>
+<li><strong>Containerization</strong>: Docker images stored in ECR</li>
+<li><strong>ECS Fargate</strong>: Serverless container hosting</li>
+<li><strong>Service Discovery</strong>: Automatic registration with AWS Cloud Map</li>
+<li><strong>Health Checks</strong>: Built-in monitoring and auto-recovery</li>
+<li><strong>Environment Configuration</strong>: Centralized config management</li>
+</ul>
+<h3 id="cdk-service-stack-structure">CDK Service Stack Structure</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#75715e">// Example: Product Service Stack
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ProductServiceStack</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Stack</span> {
+  <span style="color:#66d9ef">constructor</span>(<span style="color:#a6e22e">scope</span>: <span style="color:#66d9ef">Construct</span>, <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">props</span>: <span style="color:#66d9ef">ServiceStackProps</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">scope</span>, <span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">props</span>);
+
+    <span style="color:#75715e">// Task Definition
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">taskDefinition</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FargateTaskDefinition</span>(<span style="color:#66d9ef">this</span>, <span style="color:#e6db74">&#39;ProductTaskDef&#39;</span>, {
+      <span style="color:#a6e22e">cpu</span>: <span style="color:#66d9ef">256</span>,
+      <span style="color:#a6e22e">memoryLimitMiB</span>: <span style="color:#66d9ef">512</span>,
+    });
+
+    <span style="color:#75715e">// Container Definition
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">container</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">taskDefinition</span>.<span style="color:#a6e22e">addContainer</span>(<span style="color:#e6db74">&#39;ProductContainer&#39;</span>, {
+      <span style="color:#a6e22e">image</span>: <span style="color:#66d9ef">ContainerImage.fromEcrRepository</span>(<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">ecrRepository</span>),
+      <span style="color:#a6e22e">environment</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">NODE_ENV</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;production&#39;</span>,
+        <span style="color:#a6e22e">SERVICE_NAME</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;product-service&#39;</span>,
+      },
+      <span style="color:#a6e22e">logging</span>: <span style="color:#66d9ef">LogDrivers.awsLogs</span>({
+        <span style="color:#a6e22e">streamPrefix</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;product-service&#39;</span>,
+        <span style="color:#a6e22e">logGroup</span>: <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">LogGroup</span>(<span style="color:#66d9ef">this</span>, <span style="color:#e6db74">&#39;ProductLogGroup&#39;</span>, {
+          <span style="color:#a6e22e">logGroupName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/ecs/product-service&#39;</span>,
+          <span style="color:#a6e22e">retention</span>: <span style="color:#66d9ef">RetentionDays.ONE_WEEK</span>,
+        }),
+      }),
+    });
+
+    <span style="color:#75715e">// ECS Service
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">service</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FargateService</span>(<span style="color:#66d9ef">this</span>, <span style="color:#e6db74">&#39;ProductService&#39;</span>, {
+      <span style="color:#a6e22e">cluster</span>: <span style="color:#66d9ef">props.cluster</span>,
+      <span style="color:#a6e22e">taskDefinition</span>,
+      <span style="color:#a6e22e">desiredCount</span>: <span style="color:#66d9ef">2</span>,
+      <span style="color:#a6e22e">assignPublicIp</span>: <span style="color:#66d9ef">false</span>,
+      <span style="color:#a6e22e">cloudMapOptions</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;product-service&#39;</span>,
+        <span style="color:#a6e22e">cloudMapNamespace</span>: <span style="color:#66d9ef">props.namespace</span>,
+      },
+    });
+  }
+}
+</code></pre></div><h3 id="container-image-build-process">Container Image Build Process</h3>
+<p>Each service includes a Dockerfile optimized for production:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#75715e"># Multi-stage build for smaller images</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> node:18-alpine AS builder</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> package*.json ./<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> npm ci --only<span style="color:#f92672">=</span>production<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> node:18-alpine AS runtime</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --from<span style="color:#f92672">=</span>builder /app/node_modules ./node_modules<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 3000</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">USER</span><span style="color:#e6db74"> node</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [<span style="color:#e6db74">&#34;npm&#34;</span>, <span style="color:#e6db74">&#34;start&#34;</span>]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h3 id="service-communication">Service Communication</h3>
+<p>Services communicate using:</p>
+<ul>
+<li><strong>Service Discovery</strong>: AWS Cloud Map for internal service resolution</li>
+<li><strong>API Gateway</strong>: External client access through HTTP API</li>
+<li><strong>Direct Service Calls</strong>: Internal REST API communication</li>
+<li><strong>Event-Driven Architecture</strong>: Future implementation with SQS/SNS</li>
+</ul>
 <h3 id="content">Content</h3>
-<p>3.1. <a href="3.1-public-instance/">Connect to EC2 Public Server</a> <br>
-3.2. <a href="3.2-private-instance/">Cconnect to EC2 Private Server</a></p>
+<p>3.1. <a href="3.1-public-instance/">Deploy Product and Inventory Services</a> <br>
+3.2. <a href="3.2-private-instance/">Deploy Order and Payment Services</a></p>
 
 
 
@@ -1500,22 +1562,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
         
@@ -1538,19 +1584,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1755014751"></script>
-    <script src="/js/perfect-scrollbar.min.js?1755014751"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1755014751"></script>
-    <script src="/js/jquery.sticky.js?1755014751"></script>
-    <script src="/js/featherlight.min.js?1755014751"></script>
-    <script src="/js/highlight.pack.js?1755014751"></script>
+    <script src="/js/clipboard.min.js?1755017725"></script>
+    <script src="/js/perfect-scrollbar.min.js?1755017725"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1755017725"></script>
+    <script src="/js/jquery.sticky.js?1755017725"></script>
+    <script src="/js/featherlight.min.js?1755017725"></script>
+    <script src="/js/highlight.pack.js?1755017725"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1755014751"></script>
-    <script src="/js/learn.js?1755014751"></script>
-    <script src="/js/hugo-learn.js?1755014751"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1755017725"></script>
+    <script src="/js/learn.js?1755017725"></script>
+    <script src="/js/hugo-learn.js?1755017725"></script>
 
-    <link href="/mermaid/mermaid.css?1755014751" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1755014751"></script>
+    <link href="/mermaid/mermaid.css?1755017725" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1755017725"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

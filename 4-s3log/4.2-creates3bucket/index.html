@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Create S3 Bucket :: AWS System Manager</title>
+    <title>Setting up API Gateway :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1755014751" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1755014751" rel="stylesheet">
-    <link href="/css/hybrid.css?1755014751" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1755014751" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1755014751" rel="stylesheet">
-    <link href="/css/auto-complete.css?1755014751" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1755014751" rel="stylesheet">
-    <link href="/css/theme.css?1755014751" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1755014751" rel="stylesheet">
+    <link href="/css/nucleus.css?1755017725" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1755017725" rel="stylesheet">
+    <link href="/css/hybrid.css?1755017725" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1755017725" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1755017725" rel="stylesheet">
+    <link href="/css/auto-complete.css?1755017725" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1755017725" rel="stylesheet">
+    <link href="/css/theme.css?1755017725" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1755017725" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1755014751" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1755017725" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1755014751"></script>
+    <script src="/js/jquery-3.3.1.min.js?1755017725"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1755014751"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1755014751"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1755017725"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1755017725"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1755014751"></script>
+<script type="text/javascript" src="/js/search.js?1755017725"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-introduce/" title="Introduction" class="dd-item 
+    <li data-nav-id="/1-introduce/" title="Introduction to Microservices Architecture" class="dd-item 
         
         
         
         ">
       <a href="/1-introduce/">
-           <b> 1. </b> Introduction
+           <b> 1. </b> Introduction to Microservices Architecture
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/" title="Preparation " class="dd-item 
+    <li data-nav-id="/2-prerequiste/" title="CDK Infrastructure Setup" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/">
-           <b> 2. </b> Preparation 
+           <b> 2. </b> CDK Infrastructure Setup
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/" title="Preparing VPC and EC2" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.1-createec2/" title="Preparing Container Infrastructure" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.1-createec2/">
-           <b> 2.1 </b> Preparing VPC and EC2
+           <b> 2.1 </b> Preparing Container Infrastructure
           
             <i class="fas fa-check read-icon"></i>
           
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/3-accessibilitytoinstances/" title="Connect to EC2 servers" class="dd-item 
+    <li data-nav-id="/3-accessibilitytoinstances/" title="Deploy Core Services" class="dd-item 
         
         
         
         ">
       <a href="/3-accessibilitytoinstances/">
-           <b> 3. </b> Connect to EC2 servers
+           <b> 3. </b> Deploy Core Services
           
             <i class="fas fa-check read-icon"></i>
           
@@ -668,13 +668,13 @@
  
   
     
-    <li data-nav-id="/4-s3log/" title="Manage session logs" class="dd-item 
+    <li data-nav-id="/4-s3log/" title="Service Communication &amp; Discovery" class="dd-item 
         parent
         
         
         ">
       <a href="/4-s3log/">
-           <b> 4. </b> Manage session logs
+           <b> 4. </b> Service Communication &amp; Discovery
           
             <i class="fas fa-check read-icon"></i>
           
@@ -727,13 +727,13 @@
  
   
     
-    <li data-nav-id="/4-s3log/4.2-creates3bucket/" title="Create S3 Bucket" class="dd-item 
+    <li data-nav-id="/4-s3log/4.2-creates3bucket/" title="Setting up API Gateway" class="dd-item 
         parent
         active
         
         ">
       <a href="/4-s3log/4.2-creates3bucket/">
-           <b> 4.2 </b> Create S3 Bucket
+           <b> 4.2 </b> Setting up API Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -818,39 +818,13 @@
  
   
     
-    <li data-nav-id="/5-portfwd/" title="Port Forwarding" class="dd-item 
+    <li data-nav-id="/5-portfwd/" title="Clean up resources" class="dd-item 
         
         
         
         ">
       <a href="/5-portfwd/">
-           <b> 5. </b> Port Forwarding
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-cleanup/" title="Clean up resources" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/6-cleanup/">
-          <b>6. </b>Clean up resources
+           <b> 5. </b> Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1003,7 +977,7 @@
             
           
           
-            <a href='/'>Session Management</a> > <a href='/4-s3log/'>Manage session logs</a> > Create S3 Bucket
+            <a href='/'>E-commerce Microservices on AWS</a> > <a href='/4-s3log/'>Service Communication & Discovery</a> > Setting up API Gateway
           
         
           
@@ -1018,9 +992,14 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#api-gateway-configuration-for-e-commerce-microservices">API Gateway Configuration for E-commerce Microservices</a>
       <ul>
-        <li></li>
+        <li><a href="#cdk-implementation-for-api-gateway">CDK Implementation for API Gateway</a></li>
+        <li><a href="#api-routes-structure">API Routes Structure</a></li>
+        <li><a href="#testing-the-api-gateway">Testing the API Gateway</a></li>
+        <li><a href="#monitoring-api-gateway">Monitoring API Gateway</a></li>
+        <li><a href="#security-considerations">Security Considerations</a></li>
+        <li><a href="#next-steps">Next Steps</a></li>
       </ul>
     </li>
   </ul>
@@ -1040,7 +1019,7 @@
           
             <h1>
               
-              Create S3 Bucket
+              Setting up API Gateway
             </h1>
           
 
@@ -1048,20 +1027,146 @@
 
 
 
-	<p>In this step, we will create an S3 bucket to store session logs sent from EC2 instances.</p>
-<h4 id="create-s3-bucket">Create <strong>S3 Bucket</strong></h4>
+	<h2 id="api-gateway-configuration-for-e-commerce-microservices">API Gateway Configuration for E-commerce Microservices</h2>
+<p>In this section, we&rsquo;ll configure Amazon API Gateway as the single entry point for our e-commerce microservices system. The API Gateway will route requests to the appropriate microservices using service discovery.</p>
+<h3 id="cdk-implementation-for-api-gateway">CDK Implementation for API Gateway</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#75715e">// lib/stacks/api-gateway-stack.ts
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Stack</span>, <span style="color:#a6e22e">StackProps</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;aws-cdk-lib&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">HttpApi</span>, <span style="color:#a6e22e">HttpMethod</span>, <span style="color:#a6e22e">CorsHttpMethod</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@aws-cdk/aws-apigatewayv2-alpha&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">HttpServiceDiscoveryIntegration</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@aws-cdk/aws-apigatewayv2-integrations-alpha&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">VpcLink</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;@aws-cdk/aws-apigatewayv2-alpha&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">Construct</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;constructs&#39;</span>;
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ApiGatewayStack</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">Stack</span> {
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">readonly</span> <span style="color:#a6e22e">httpApi</span>: <span style="color:#66d9ef">HttpApi</span>;
+
+  <span style="color:#66d9ef">constructor</span>(<span style="color:#a6e22e">scope</span>: <span style="color:#66d9ef">Construct</span>, <span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">props</span>: <span style="color:#66d9ef">ApiGatewayStackProps</span>) {
+    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">scope</span>, <span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">props</span>);
+
+    <span style="color:#75715e">// VPC Link for private integration
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">vpcLink</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">VpcLink</span>(<span style="color:#66d9ef">this</span>, <span style="color:#e6db74">&#39;EcommerceVpcLink&#39;</span>, {
+      <span style="color:#a6e22e">vpc</span>: <span style="color:#66d9ef">props.vpc</span>,
+      <span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;VPC Link for e-commerce microservices&#39;</span>,
+    });
+
+    <span style="color:#75715e">// HTTP API Gateway
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">httpApi</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">HttpApi</span>(<span style="color:#66d9ef">this</span>, <span style="color:#e6db74">&#39;EcommerceApi&#39;</span>, {
+      <span style="color:#a6e22e">apiName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;ecommerce-microservices-api&#39;</span>,
+      <span style="color:#a6e22e">description</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;HTTP API for e-commerce microservices&#39;</span>,
+      <span style="color:#a6e22e">corsPreflight</span><span style="color:#f92672">:</span> {
+        <span style="color:#a6e22e">allowOrigins</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;*&#39;</span>],
+        <span style="color:#a6e22e">allowMethods</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">CorsHttpMethod</span>.<span style="color:#a6e22e">ANY</span>],
+        <span style="color:#a6e22e">allowHeaders</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;*&#39;</span>],
+      },
+    });
+
+    <span style="color:#75715e">// Add routes for each service
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">addServiceRoutes</span>(<span style="color:#a6e22e">vpcLink</span>, <span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">services</span>);
+  }
+
+  <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">addServiceRoutes</span>(<span style="color:#a6e22e">vpcLink</span>: <span style="color:#66d9ef">VpcLink</span>, <span style="color:#a6e22e">services</span>: <span style="color:#66d9ef">ServiceInfo</span>[]) {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">routes</span> <span style="color:#f92672">=</span> [
+      { <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;products&#39;</span>, <span style="color:#a6e22e">service</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;product-service&#39;</span> },
+      { <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;inventory&#39;</span>, <span style="color:#a6e22e">service</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;inventory-service&#39;</span> },
+      { <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;orders&#39;</span>, <span style="color:#a6e22e">service</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;order-service&#39;</span> },
+      { <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;payments&#39;</span>, <span style="color:#a6e22e">service</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;payment-service&#39;</span> },
+      { <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;suppliers&#39;</span>, <span style="color:#a6e22e">service</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;supplier-service&#39;</span> },
+      { <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;consumers&#39;</span>, <span style="color:#a6e22e">service</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;consumer-service&#39;</span> },
+    ];
+
+    <span style="color:#a6e22e">routes</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">route</span> <span style="color:#f92672">=&gt;</span> {
+      <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">integration</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">HttpServiceDiscoveryIntegration</span>(
+        <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">route</span>.<span style="color:#a6e22e">service</span><span style="color:#e6db74">}</span><span style="color:#e6db74">Integration`</span>,
+        <span style="color:#a6e22e">services</span>.<span style="color:#a6e22e">find</span>(<span style="color:#a6e22e">s</span> <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">route</span>.<span style="color:#a6e22e">service</span>)<span style="color:#f92672">?</span>.<span style="color:#a6e22e">cloudMapService</span><span style="color:#f92672">!</span>,
+        {
+          <span style="color:#a6e22e">vpcLink</span>,
+        }
+      );
+
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">httpApi</span>.<span style="color:#a6e22e">addRoutes</span>({
+        <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`/api/v1/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">route</span>.<span style="color:#a6e22e">path</span><span style="color:#e6db74">}</span><span style="color:#e6db74">/{proxy+}`</span>,
+        <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">HttpMethod</span>.<span style="color:#a6e22e">ANY</span>],
+        <span style="color:#a6e22e">integration</span>,
+      });
+    });
+  }
+}
+</code></pre></div><h3 id="api-routes-structure">API Routes Structure</h3>
+<p>Our API Gateway routes requests based on URL paths:</p>
+<pre tabindex="0"><code>GET /api/v1/products/*     → product-service.ecommerce.local
+GET /api/v1/inventory/*    → inventory-service.ecommerce.local  
+POST /api/v1/orders/*      → order-service.ecommerce.local
+POST /api/v1/payments/*    → payment-service.ecommerce.local
+GET /api/v1/suppliers/*    → supplier-service.ecommerce.local
+GET /api/v1/consumers/*    → consumer-service.ecommerce.local
+</code></pre><h3 id="testing-the-api-gateway">Testing the API Gateway</h3>
+<p>After deployment, you can test the endpoints:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Get API Gateway URL from CDK output</span>
+export API_URL<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>aws cloudformation describe-stacks <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --stack-name ApiGatewayStack <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --query <span style="color:#e6db74">&#39;Stacks[0].Outputs[?OutputKey==`ApiUrl`].OutputValue&#39;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  --output text<span style="color:#66d9ef">)</span>
+
+<span style="color:#75715e"># Test product service</span>
+curl -X GET <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>API_URL<span style="color:#e6db74">}</span><span style="color:#e6db74">/api/v1/products&#34;</span>
+
+<span style="color:#75715e"># Test with specific product ID</span>
+curl -X GET <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>API_URL<span style="color:#e6db74">}</span><span style="color:#e6db74">/api/v1/products/123&#34;</span>
+
+<span style="color:#75715e"># Create a new order</span>
+curl -X POST <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>API_URL<span style="color:#e6db74">}</span><span style="color:#e6db74">/api/v1/orders&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  -d <span style="color:#e6db74">&#39;{
+</span><span style="color:#e6db74">    &#34;customerId&#34;: &#34;customer-123&#34;,
+</span><span style="color:#e6db74">    &#34;items&#34;: [
+</span><span style="color:#e6db74">      {
+</span><span style="color:#e6db74">        &#34;productId&#34;: &#34;product-456&#34;,
+</span><span style="color:#e6db74">        &#34;quantity&#34;: 2,
+</span><span style="color:#e6db74">        &#34;price&#34;: 29.99
+</span><span style="color:#e6db74">      }
+</span><span style="color:#e6db74">    ]
+</span><span style="color:#e6db74">  }&#39;</span>
+</code></pre></div><h3 id="monitoring-api-gateway">Monitoring API Gateway</h3>
+<p>Enable logging and monitoring:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#75715e">// Add to API Gateway stack
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">LogGroup</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#39;aws-cdk-lib/aws-logs&#39;</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">accessLogGroup</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">LogGroup</span>(<span style="color:#66d9ef">this</span>, <span style="color:#e6db74">&#39;ApiGatewayAccessLogs&#39;</span>, {
+  <span style="color:#a6e22e">logGroupName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/aws/apigateway/ecommerce-api&#39;</span>,
+  <span style="color:#a6e22e">retention</span>: <span style="color:#66d9ef">RetentionDays.ONE_WEEK</span>,
+});
+
+<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">httpApi</span>.<span style="color:#a6e22e">addStage</span>(<span style="color:#e6db74">&#39;prod&#39;</span>, {
+  <span style="color:#a6e22e">stageName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;prod&#39;</span>,
+  <span style="color:#a6e22e">autoDeploy</span>: <span style="color:#66d9ef">true</span>,
+  <span style="color:#a6e22e">accessLogSettings</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">destinationArn</span>: <span style="color:#66d9ef">accessLogGroup.logGroupArn</span>,
+    <span style="color:#a6e22e">format</span>: <span style="color:#66d9ef">JSON.stringify</span>({
+      <span style="color:#a6e22e">requestId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;$context.requestId&#39;</span>,
+      <span style="color:#a6e22e">requestPath</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;$context.path&#39;</span>,
+      <span style="color:#a6e22e">requestMethod</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;$context.httpMethod&#39;</span>,
+      <span style="color:#a6e22e">responseLatency</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;$context.responseLatency&#39;</span>,
+      <span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;$context.status&#39;</span>,
+    }),
+  },
+});
+</code></pre></div><h3 id="security-considerations">Security Considerations</h3>
+<p>For production environments, consider adding:</p>
 <ol>
-<li>Access <a href="https://s3.console.aws.amazon.com/s3/home">S3 service management console</a></li>
+<li><strong>API Keys</strong> for rate limiting</li>
+<li><strong>JWT Authorizers</strong> for authentication</li>
+<li><strong>WAF</strong> for security protection</li>
+<li><strong>Request validation</strong> for input sanitization</li>
+</ol>
+<h3 id="next-steps">Next Steps</h3>
+<p>After setting up the API Gateway:</p>
+<ol>
+<li>Deploy the stack: <code>cdk deploy ApiGatewayStack</code></li>
+<li>Test all service endpoints</li>
+<li>Configure monitoring and alerting</li>
+<li>Set up authentication if needed</li>
 </ol>
 <ul>
-<li>Click <strong>Create bucket</strong>.</li>
-</ul>
-<p><img src="/images/4.s3/005-s3.png" alt="S3"></p>
-<ol start="2">
-<li>At the <strong>Create bucket</strong> page.</li>
-</ol>
-<ul>
-<li>In the <strong>Bucket name</strong> field, enter the bucket name <strong>lab-yourname-bucket-0001</strong></li>
 <li>In the <strong>Region</strong> section, select <strong>Region</strong> you are doing the current lab.</li>
 </ul>
 <p><img src="/images/4.s3/006-s3.png" alt="S3"></p>
@@ -1536,22 +1641,6 @@ In the next step, we will configure the S3 Gateway Endpoint feature to allow EC2
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
         
@@ -1574,19 +1663,19 @@ In the next step, we will configure the S3 Gateway Endpoint feature to allow EC2
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1755014751"></script>
-    <script src="/js/perfect-scrollbar.min.js?1755014751"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1755014751"></script>
-    <script src="/js/jquery.sticky.js?1755014751"></script>
-    <script src="/js/featherlight.min.js?1755014751"></script>
-    <script src="/js/highlight.pack.js?1755014751"></script>
+    <script src="/js/clipboard.min.js?1755017725"></script>
+    <script src="/js/perfect-scrollbar.min.js?1755017725"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1755017725"></script>
+    <script src="/js/jquery.sticky.js?1755017725"></script>
+    <script src="/js/featherlight.min.js?1755017725"></script>
+    <script src="/js/highlight.pack.js?1755017725"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1755014751"></script>
-    <script src="/js/learn.js?1755014751"></script>
-    <script src="/js/hugo-learn.js?1755014751"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1755017725"></script>
+    <script src="/js/learn.js?1755017725"></script>
+    <script src="/js/hugo-learn.js?1755017725"></script>
 
-    <link href="/mermaid/mermaid.css?1755014751" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1755014751"></script>
+    <link href="/mermaid/mermaid.css?1755017725" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1755017725"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

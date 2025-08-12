@@ -2,19 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/vi/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/"
-                />
-  </url><url>
     <loc>/vi/2-prerequiste/2.1-createec2/</loc>
     <xhtml:link
                 rel="alternate"
@@ -37,6 +24,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/4-s3log/4.1-updateiamrole/"
+                />
+  </url><url>
+    <loc>/vi/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/"
                 />
   </url><url>
     <loc>/vi/1-introduce/</loc>
@@ -99,18 +98,6 @@
                 href="/vi/2-prerequiste/2.1-createec2/2.1.1-createvpc/"
                 />
   </url><url>
-    <loc>/vi/2-prerequiste/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-prerequiste/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-prerequiste/"
-                />
-  </url><url>
     <loc>/vi/3-accessibilitytoinstances/3.2-private-instance/</loc>
     <xhtml:link
                 rel="alternate"
@@ -133,6 +120,18 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/4-s3log/4.2-creates3bucket/"
+                />
+  </url><url>
+    <loc>/vi/2-prerequiste/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-prerequiste/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-prerequiste/"
                 />
   </url><url>
     <loc>/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/</loc>
@@ -301,19 +300,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/"
-                />
-  </url><url>
-    <loc>/vi/6-cleanup/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/6-cleanup/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/6-cleanup/"
                 />
   </url><url>
     <loc>/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/</loc>

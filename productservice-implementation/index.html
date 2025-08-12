@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Create Private Subnet :: AWS System Manager</title>
+    <title> :: AWS System Manager</title>
 
     
     <link href="/css/nucleus.css?1755017725" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">
+  <body class="" data-url="/productservice-implementation/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -109,7 +109,7 @@
   
     
     <li data-nav-id="/2-prerequiste/" title="CDK Infrastructure Setup" class="dd-item 
-        parent
+        
         
         
         ">
@@ -140,7 +140,7 @@
   
     
     <li data-nav-id="/2-prerequiste/2.1-createec2/" title="Preparing Container Infrastructure" class="dd-item 
-        parent
+        
         
         
         ">
@@ -227,8 +227,8 @@
   
     
     <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/" title="Create Private Subnet" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">
@@ -871,22 +871,10 @@
                   
                     
                     
-                      <option id="en" value="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/" selected>English</option>
+                      <option id="en" value="/productservice-implementation/" selected>English</option>
                     
                   
               
-                  
-              
-          
-              
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="vi" value="/vi/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">Tiếng Việt</option>
-                    
                   
               
           
@@ -973,19 +961,7 @@
             
           
           
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='/'>E-commerce Microservices on AWS</a> > <a href='/2-prerequiste/'>CDK Infrastructure Setup</a> > <a href='/2-prerequiste/2.1-createec2/'>Preparing Container Infrastructure</a> > Create Private Subnet
-          
-        
-          
-        
+            <a href='/'>E-commerce Microservices on AWS</a> > 
           
         
           
@@ -998,9 +974,31 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#api-endpoints">API Endpoints</a>
       <ul>
-        <li></li>
+        <li><a href="#get-apiv1products">GET /api/v1/products</a></li>
+        <li><a href="#get-apiv1productsid">GET /api/v1/products/{id}</a></li>
+        <li><a href="#post-apiv1products-admin-only">POST /api/v1/products (Admin Only)</a></li>
+      </ul>
+    </li>
+    <li><a href="#docker-configuration">Docker Configuration</a>
+      <ul>
+        <li><a href="#dockerfile">Dockerfile</a></li>
+        <li><a href="#docker-composeyml-for-local-development">docker-compose.yml (for local development)</a></li>
+      </ul>
+    </li>
+    <li><a href="#ecs-task-definition">ECS Task Definition</a></li>
+    <li><a href="#database-schema-postgresql">Database Schema (PostgreSQL)</a></li>
+    <li><a href="#health-check-endpoint">Health Check Endpoint</a>
+      <ul>
+        <li><a href="#get-health">GET /health</a></li>
+      </ul>
+    </li>
+    <li><a href="#monitoring-and-observability">Monitoring and Observability</a>
+      <ul>
+        <li><a href="#cloudwatch-metrics">CloudWatch Metrics</a></li>
+        <li><a href="#log-format-json">Log Format (JSON)</a></li>
       </ul>
     </li>
   </ul>
@@ -1020,44 +1018,257 @@
           
             <h1>
               
-              Create Private Subnet
+              
             </h1>
           
 
         
 
 
-
-	<h4 id="create-private-subnet">Create Private Subnet</h4>
-<ol>
-<li>Click <strong>Subnets</strong>.
+<h1 id="product-service-implementation">Product Service Implementation</h1>
+<h2 id="overview">Overview</h2>
+<p>The Product Service is responsible for managing the product catalog in our e-commerce microservices architecture. It handles product information, categories, pricing, and metadata.</p>
+<h2 id="api-endpoints">API Endpoints</h2>
+<h3 id="get-apiv1products">GET /api/v1/products</h3>
+<p>List all products with pagination and filtering capabilities.</p>
+<p><strong>Query Parameters:</strong></p>
 <ul>
-<li>Click <strong>Create subnet</strong>.</li>
+<li><code>page</code> (optional): Page number (default: 1)</li>
+<li><code>limit</code> (optional): Items per page (default: 20, max: 100)</li>
+<li><code>category</code> (optional): Filter by category</li>
+<li><code>search</code> (optional): Search term for product names/descriptions</li>
+<li><code>minPrice</code> (optional): Minimum price filter</li>
+<li><code>maxPrice</code> (optional): Maximum price filter</li>
 </ul>
-</li>
-</ol>
-<p><img src="/images/2.prerequisite/017-createsubnet.png" alt="VPC"></p>
-<ol start="2">
-<li>At the <strong>Create subnet</strong> page.
+<p><strong>Response:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;data&#34;</span>: [
+    {
+      <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;prod-001&#34;</span>,
+      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Wireless Bluetooth Headphones&#34;</span>,
+      <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;High-quality wireless headphones with noise cancellation&#34;</span>,
+      <span style="color:#f92672">&#34;price&#34;</span>: <span style="color:#ae81ff">99.99</span>,
+      <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Electronics&#34;</span>,
+      <span style="color:#f92672">&#34;imageUrl&#34;</span>: <span style="color:#e6db74">&#34;https://example.com/images/headphones.jpg&#34;</span>,
+      <span style="color:#f92672">&#34;inStock&#34;</span>: <span style="color:#66d9ef">true</span>,
+      <span style="color:#f92672">&#34;supplierId&#34;</span>: <span style="color:#e6db74">&#34;sup-001&#34;</span>,
+      <span style="color:#f92672">&#34;createdAt&#34;</span>: <span style="color:#e6db74">&#34;2024-01-15T10:30:00Z&#34;</span>,
+      <span style="color:#f92672">&#34;updatedAt&#34;</span>: <span style="color:#e6db74">&#34;2024-01-20T15:45:00Z&#34;</span>
+    }
+  ],
+  <span style="color:#f92672">&#34;pagination&#34;</span>: {
+    <span style="color:#f92672">&#34;page&#34;</span>: <span style="color:#ae81ff">1</span>,
+    <span style="color:#f92672">&#34;limit&#34;</span>: <span style="color:#ae81ff">20</span>,
+    <span style="color:#f92672">&#34;total&#34;</span>: <span style="color:#ae81ff">150</span>,
+    <span style="color:#f92672">&#34;totalPages&#34;</span>: <span style="color:#ae81ff">8</span>
+  }
+}
+</code></pre></div><h3 id="get-apiv1productsid">GET /api/v1/products/{id}</h3>
+<p>Get detailed information about a specific product.</p>
+<p><strong>Response:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;prod-001&#34;</span>,
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Wireless Bluetooth Headphones&#34;</span>,
+  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;High-quality wireless headphones with noise cancellation features. Perfect for music lovers and professionals.&#34;</span>,
+  <span style="color:#f92672">&#34;price&#34;</span>: <span style="color:#ae81ff">99.99</span>,
+  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Electronics&#34;</span>,
+  <span style="color:#f92672">&#34;subcategory&#34;</span>: <span style="color:#e6db74">&#34;Audio&#34;</span>,
+  <span style="color:#f92672">&#34;imageUrls&#34;</span>: [
+    <span style="color:#e6db74">&#34;https://example.com/images/headphones-1.jpg&#34;</span>,
+    <span style="color:#e6db74">&#34;https://example.com/images/headphones-2.jpg&#34;</span>
+  ],
+  <span style="color:#f92672">&#34;specifications&#34;</span>: {
+    <span style="color:#f92672">&#34;brand&#34;</span>: <span style="color:#e6db74">&#34;TechAudio&#34;</span>,
+    <span style="color:#f92672">&#34;model&#34;</span>: <span style="color:#e6db74">&#34;TA-BT500&#34;</span>,
+    <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;Black&#34;</span>,
+    <span style="color:#f92672">&#34;weight&#34;</span>: <span style="color:#e6db74">&#34;250g&#34;</span>,
+    <span style="color:#f92672">&#34;batteryLife&#34;</span>: <span style="color:#e6db74">&#34;30 hours&#34;</span>
+  },
+  <span style="color:#f92672">&#34;inStock&#34;</span>: <span style="color:#66d9ef">true</span>,
+  <span style="color:#f92672">&#34;supplierId&#34;</span>: <span style="color:#e6db74">&#34;sup-001&#34;</span>,
+  <span style="color:#f92672">&#34;supplierName&#34;</span>: <span style="color:#e6db74">&#34;Tech Components Ltd&#34;</span>,
+  <span style="color:#f92672">&#34;ratings&#34;</span>: {
+    <span style="color:#f92672">&#34;average&#34;</span>: <span style="color:#ae81ff">4.5</span>,
+    <span style="color:#f92672">&#34;count&#34;</span>: <span style="color:#ae81ff">127</span>
+  },
+  <span style="color:#f92672">&#34;createdAt&#34;</span>: <span style="color:#e6db74">&#34;2024-01-15T10:30:00Z&#34;</span>,
+  <span style="color:#f92672">&#34;updatedAt&#34;</span>: <span style="color:#e6db74">&#34;2024-01-20T15:45:00Z&#34;</span>
+}
+</code></pre></div><h3 id="post-apiv1products-admin-only">POST /api/v1/products (Admin Only)</h3>
+<p>Create a new product.</p>
+<p><strong>Request Body:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Wireless Mouse&#34;</span>,
+  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Ergonomic wireless mouse with precision tracking&#34;</span>,
+  <span style="color:#f92672">&#34;price&#34;</span>: <span style="color:#ae81ff">29.99</span>,
+  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Electronics&#34;</span>,
+  <span style="color:#f92672">&#34;subcategory&#34;</span>: <span style="color:#e6db74">&#34;Computer Accessories&#34;</span>,
+  <span style="color:#f92672">&#34;imageUrls&#34;</span>: [<span style="color:#e6db74">&#34;https://example.com/images/mouse.jpg&#34;</span>],
+  <span style="color:#f92672">&#34;specifications&#34;</span>: {
+    <span style="color:#f92672">&#34;brand&#34;</span>: <span style="color:#e6db74">&#34;ComputerPro&#34;</span>,
+    <span style="color:#f92672">&#34;model&#34;</span>: <span style="color:#e6db74">&#34;CP-WM200&#34;</span>,
+    <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;Silver&#34;</span>,
+    <span style="color:#f92672">&#34;connectivity&#34;</span>: <span style="color:#e6db74">&#34;2.4GHz Wireless&#34;</span>
+  },
+  <span style="color:#f92672">&#34;supplierId&#34;</span>: <span style="color:#e6db74">&#34;sup-002&#34;</span>
+}
+</code></pre></div><h2 id="docker-configuration">Docker Configuration</h2>
+<h3 id="dockerfile">Dockerfile</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> node:18-alpine</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">WORKDIR</span><span style="color:#e6db74"> /app</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> package*.json ./<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> npm ci --only<span style="color:#f92672">=</span>production<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> . .<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">EXPOSE</span><span style="color:#e6db74"> 3000</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">USER</span><span style="color:#e6db74"> node</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> [<span style="color:#e6db74">&#34;npm&#34;</span>, <span style="color:#e6db74">&#34;start&#34;</span>]<span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h3 id="docker-composeyml-for-local-development">docker-compose.yml (for local development)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3.8&#39;</span>
+<span style="color:#f92672">services</span>:
+  <span style="color:#f92672">product-service</span>:
+    <span style="color:#f92672">build</span>: <span style="color:#ae81ff">.</span>
+    <span style="color:#f92672">ports</span>:
+      - <span style="color:#e6db74">&#34;3001:3000&#34;</span>
+    <span style="color:#f92672">environment</span>:
+      - <span style="color:#ae81ff">NODE_ENV=development</span>
+      - <span style="color:#ae81ff">DB_HOST=product-db</span>
+      - <span style="color:#ae81ff">DB_PORT=5432</span>
+      - <span style="color:#ae81ff">DB_NAME=products</span>
+      - <span style="color:#ae81ff">DB_USER=productuser</span>
+      - <span style="color:#ae81ff">DB_PASSWORD=productpass</span>
+      - <span style="color:#ae81ff">REDIS_URL=redis://redis:6379</span>
+    <span style="color:#f92672">depends_on</span>:
+      - <span style="color:#ae81ff">product-db</span>
+      - <span style="color:#ae81ff">redis</span>
+
+  <span style="color:#f92672">product-db</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">postgres:15-alpine</span>
+    <span style="color:#f92672">environment</span>:
+      - <span style="color:#ae81ff">POSTGRES_DB=products</span>
+      - <span style="color:#ae81ff">POSTGRES_USER=productuser</span>
+      - <span style="color:#ae81ff">POSTGRES_PASSWORD=productpass</span>
+    <span style="color:#f92672">volumes</span>:
+      - <span style="color:#ae81ff">product_db_data:/var/lib/postgresql/data</span>
+
+  <span style="color:#f92672">redis</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">redis:7-alpine</span>
+    <span style="color:#f92672">ports</span>:
+      - <span style="color:#e6db74">&#34;6379:6379&#34;</span>
+
+<span style="color:#f92672">volumes</span>:
+  <span style="color:#f92672">product_db_data</span>:
+</code></pre></div><h2 id="ecs-task-definition">ECS Task Definition</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;family&#34;</span>: <span style="color:#e6db74">&#34;product-service&#34;</span>,
+  <span style="color:#f92672">&#34;networkMode&#34;</span>: <span style="color:#e6db74">&#34;awsvpc&#34;</span>,
+  <span style="color:#f92672">&#34;requiresCompatibilities&#34;</span>: [<span style="color:#e6db74">&#34;FARGATE&#34;</span>],
+  <span style="color:#f92672">&#34;cpu&#34;</span>: <span style="color:#e6db74">&#34;256&#34;</span>,
+  <span style="color:#f92672">&#34;memory&#34;</span>: <span style="color:#e6db74">&#34;512&#34;</span>,
+  <span style="color:#f92672">&#34;executionRoleArn&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:iam::ACCOUNT:role/ecsTaskExecutionRole&#34;</span>,
+  <span style="color:#f92672">&#34;taskRoleArn&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:iam::ACCOUNT:role/ecsTaskRole&#34;</span>,
+  <span style="color:#f92672">&#34;containerDefinitions&#34;</span>: [
+    {
+      <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;product-service&#34;</span>,
+      <span style="color:#f92672">&#34;image&#34;</span>: <span style="color:#e6db74">&#34;ACCOUNT.dkr.ecr.REGION.amazonaws.com/product-service:latest&#34;</span>,
+      <span style="color:#f92672">&#34;portMappings&#34;</span>: [
+        {
+          <span style="color:#f92672">&#34;containerPort&#34;</span>: <span style="color:#ae81ff">3000</span>,
+          <span style="color:#f92672">&#34;protocol&#34;</span>: <span style="color:#e6db74">&#34;tcp&#34;</span>
+        }
+      ],
+      <span style="color:#f92672">&#34;environment&#34;</span>: [
+        {
+          <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;NODE_ENV&#34;</span>,
+          <span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;production&#34;</span>
+        },
+        {
+          <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;DB_HOST&#34;</span>,
+          <span style="color:#f92672">&#34;value&#34;</span>: <span style="color:#e6db74">&#34;product-db.cluster-xyz.us-east-1.rds.amazonaws.com&#34;</span>
+        }
+      ],
+      <span style="color:#f92672">&#34;secrets&#34;</span>: [
+        {
+          <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;DB_PASSWORD&#34;</span>,
+          <span style="color:#f92672">&#34;valueFrom&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:secretsmanager:us-east-1:ACCOUNT:secret:product-db-password&#34;</span>
+        }
+      ],
+      <span style="color:#f92672">&#34;logConfiguration&#34;</span>: {
+        <span style="color:#f92672">&#34;logDriver&#34;</span>: <span style="color:#e6db74">&#34;awslogs&#34;</span>,
+        <span style="color:#f92672">&#34;options&#34;</span>: {
+          <span style="color:#f92672">&#34;awslogs-group&#34;</span>: <span style="color:#e6db74">&#34;/ecs/product-service&#34;</span>,
+          <span style="color:#f92672">&#34;awslogs-region&#34;</span>: <span style="color:#e6db74">&#34;us-east-1&#34;</span>,
+          <span style="color:#f92672">&#34;awslogs-stream-prefix&#34;</span>: <span style="color:#e6db74">&#34;ecs&#34;</span>
+        }
+      },
+      <span style="color:#f92672">&#34;healthCheck&#34;</span>: {
+        <span style="color:#f92672">&#34;command&#34;</span>: [<span style="color:#e6db74">&#34;CMD-SHELL&#34;</span>, <span style="color:#e6db74">&#34;curl -f http://localhost:3000/health || exit 1&#34;</span>],
+        <span style="color:#f92672">&#34;interval&#34;</span>: <span style="color:#ae81ff">30</span>,
+        <span style="color:#f92672">&#34;timeout&#34;</span>: <span style="color:#ae81ff">5</span>,
+        <span style="color:#f92672">&#34;retries&#34;</span>: <span style="color:#ae81ff">3</span>,
+        <span style="color:#f92672">&#34;startPeriod&#34;</span>: <span style="color:#ae81ff">60</span>
+      }
+    }
+  ]
+}
+</code></pre></div><h2 id="database-schema-postgresql">Database Schema (PostgreSQL)</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> products (
+    id VARCHAR(<span style="color:#ae81ff">50</span>) <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+    name VARCHAR(<span style="color:#ae81ff">255</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+    description TEXT,
+    price DECIMAL(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+    category VARCHAR(<span style="color:#ae81ff">100</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+    subcategory VARCHAR(<span style="color:#ae81ff">100</span>),
+    image_urls TEXT[],
+    specifications JSONB,
+    supplier_id VARCHAR(<span style="color:#ae81ff">50</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+    in_stock BOOLEAN <span style="color:#66d9ef">DEFAULT</span> <span style="color:#66d9ef">true</span>,
+    created_at <span style="color:#66d9ef">TIMESTAMP</span> <span style="color:#66d9ef">WITH</span> TIME <span style="color:#66d9ef">ZONE</span> <span style="color:#66d9ef">DEFAULT</span> NOW(),
+    updated_at <span style="color:#66d9ef">TIMESTAMP</span> <span style="color:#66d9ef">WITH</span> TIME <span style="color:#66d9ef">ZONE</span> <span style="color:#66d9ef">DEFAULT</span> NOW()
+);
+
+<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> idx_products_category <span style="color:#66d9ef">ON</span> products(category);
+<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> idx_products_supplier <span style="color:#66d9ef">ON</span> products(supplier_id);
+<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> idx_products_price <span style="color:#66d9ef">ON</span> products(price);
+<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">INDEX</span> idx_products_name <span style="color:#66d9ef">ON</span> products <span style="color:#66d9ef">USING</span> gin(to_tsvector(<span style="color:#e6db74">&#39;english&#39;</span>, name));
+</code></pre></div><h2 id="health-check-endpoint">Health Check Endpoint</h2>
+<h3 id="get-health">GET /health</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;status&#34;</span>: <span style="color:#e6db74">&#34;healthy&#34;</span>,
+  <span style="color:#f92672">&#34;timestamp&#34;</span>: <span style="color:#e6db74">&#34;2024-01-20T16:30:00Z&#34;</span>,
+  <span style="color:#f92672">&#34;service&#34;</span>: <span style="color:#e6db74">&#34;product-service&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+  <span style="color:#f92672">&#34;dependencies&#34;</span>: {
+    <span style="color:#f92672">&#34;database&#34;</span>: <span style="color:#e6db74">&#34;healthy&#34;</span>,
+    <span style="color:#f92672">&#34;redis&#34;</span>: <span style="color:#e6db74">&#34;healthy&#34;</span>
+  }
+}
+</code></pre></div><h2 id="monitoring-and-observability">Monitoring and Observability</h2>
+<h3 id="cloudwatch-metrics">CloudWatch Metrics</h3>
 <ul>
-<li>In the <strong>VPC ID</strong> section, click <strong>Lab VPC</strong>.</li>
-<li>In the <strong>Subnet name</strong> field, enter <strong>Lab Private Subnet</strong>.</li>
-<li>In the <strong>Availability Zone</strong> section, select the first Availability zone.</li>
-<li>In the field <strong>IPv4 CIRD block</strong> enter <strong>10.10.2.0/24</strong>.</li>
+<li>Request count per endpoint</li>
+<li>Response time percentiles</li>
+<li>Error rates</li>
+<li>Database connection pool status</li>
 </ul>
-</li>
-</ol>
-<p><img src="/images/2.prerequisite/018-createsubnet.png" alt="VPC"></p>
-<ol start="3">
-<li>Scroll to the bottom of the page, click <strong>Create subnet</strong>.</li>
-</ol>
-<p>The next step is to create the necessary security groups for the lab.</p>
+<h3 id="log-format-json">Log Format (JSON)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;timestamp&#34;</span>: <span style="color:#e6db74">&#34;2024-01-20T16:30:00Z&#34;</span>,
+  <span style="color:#f92672">&#34;level&#34;</span>: <span style="color:#e6db74">&#34;info&#34;</span>,
+  <span style="color:#f92672">&#34;service&#34;</span>: <span style="color:#e6db74">&#34;product-service&#34;</span>,
+  <span style="color:#f92672">&#34;traceId&#34;</span>: <span style="color:#e6db74">&#34;abc-123-def&#34;</span>,
+  <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Product retrieved successfully&#34;</span>,
+  <span style="color:#f92672">&#34;productId&#34;</span>: <span style="color:#e6db74">&#34;prod-001&#34;</span>,
+  <span style="color:#f92672">&#34;responseTime&#34;</span>: <span style="color:#ae81ff">45</span>
+}
+</code></pre></div>
 
-
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1111,7 +1322,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1127,7 +1337,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1142,9 +1351,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1178,7 +1384,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1194,9 +1399,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1520,10 +1722,8 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/" title="Create Public Subnet"> <i class="fa fa-chevron-left"></i></a>
 		
-		
-			<a class="nav nav-next" href="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Create security groups" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-introduce/" title="Introduction to Microservices Architecture" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1561,3 +1761,4 @@
 </script>
   </body>
 </html>
+

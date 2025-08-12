@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Session Management on AWS System Manager</title>
+    <title>E-commerce Microservices on AWS on AWS System Manager</title>
     <link>/</link>
-    <description>Recent content in Session Management on AWS System Manager</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Jan 1970 07:33:42 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in E-commerce Microservices on AWS on AWS System Manager</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>/cdk-setup-guide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cdk-setup-guide/</guid>
+      <description>E-commerce Microservices CDK Setup Guide Quick Start This guide will help you set up the CDK infrastructure for our e-commerce microservices workshop.
+Prerequisites  AWS CLI configured with appropriate permissions Node.js (v16 or later) AWS CDK installed globally Docker for building container images  Installation Steps 1. Install AWS CDK npm install -g aws-cdk 2. Verify Installation cdk --version 3. Bootstrap CDK (First time only) cdk bootstrap aws://ACCOUNT-NUMBER/REGION Project Structure ecommerce-microservices-cdk/├── bin/│ └── app.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/productservice-implementation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/productservice-implementation/</guid>
+      <description>Product Service Implementation Overview The Product Service is responsible for managing the product catalog in our e-commerce microservices architecture. It handles product information, categories, pricing, and metadata.
+API Endpoints GET /api/v1/products List all products with pagination and filtering capabilities.
+Query Parameters:
+ page (optional): Page number (default: 1) limit (optional): Items per page (default: 20, max: 100) category (optional): Filter by category search (optional): Search term for product names/descriptions minPrice (optional): Minimum price filter maxPrice (optional): Maximum price filter  Response:</description>
+    </item>
+    
   </channel>
 </rss>

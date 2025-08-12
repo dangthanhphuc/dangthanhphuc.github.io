@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Preparation  :: AWS System Manager</title>
+    <title>CDK Infrastructure Setup :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1755014751" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1755014751" rel="stylesheet">
-    <link href="/css/hybrid.css?1755014751" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1755014751" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1755014751" rel="stylesheet">
-    <link href="/css/auto-complete.css?1755014751" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1755014751" rel="stylesheet">
-    <link href="/css/theme.css?1755014751" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1755014751" rel="stylesheet">
+    <link href="/css/nucleus.css?1755017725" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1755017725" rel="stylesheet">
+    <link href="/css/hybrid.css?1755017725" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1755017725" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1755017725" rel="stylesheet">
+    <link href="/css/auto-complete.css?1755017725" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1755017725" rel="stylesheet">
+    <link href="/css/theme.css?1755017725" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1755017725" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1755014751" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1755017725" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1755014751"></script>
+    <script src="/js/jquery-3.3.1.min.js?1755017725"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1755014751"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1755014751"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1755017725"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1755017725"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1755014751"></script>
+<script type="text/javascript" src="/js/search.js?1755017725"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-introduce/" title="Introduction" class="dd-item 
+    <li data-nav-id="/1-introduce/" title="Introduction to Microservices Architecture" class="dd-item 
         
         
         
         ">
       <a href="/1-introduce/">
-           <b> 1. </b> Introduction
+           <b> 1. </b> Introduction to Microservices Architecture
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/" title="Preparation " class="dd-item 
+    <li data-nav-id="/2-prerequiste/" title="CDK Infrastructure Setup" class="dd-item 
         parent
         active
         
         ">
       <a href="/2-prerequiste/">
-           <b> 2. </b> Preparation 
+           <b> 2. </b> CDK Infrastructure Setup
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/" title="Preparing VPC and EC2" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.1-createec2/" title="Preparing Container Infrastructure" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.1-createec2/">
-           <b> 2.1 </b> Preparing VPC and EC2
+           <b> 2.1 </b> Preparing Container Infrastructure
           
             <i class="fas fa-check read-icon"></i>
           
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/3-accessibilitytoinstances/" title="Connect to EC2 servers" class="dd-item 
+    <li data-nav-id="/3-accessibilitytoinstances/" title="Deploy Core Services" class="dd-item 
         
         
         
         ">
       <a href="/3-accessibilitytoinstances/">
-           <b> 3. </b> Connect to EC2 servers
+           <b> 3. </b> Deploy Core Services
           
             <i class="fas fa-check read-icon"></i>
           
@@ -668,13 +668,13 @@
  
   
     
-    <li data-nav-id="/4-s3log/" title="Manage session logs" class="dd-item 
+    <li data-nav-id="/4-s3log/" title="Service Communication &amp; Discovery" class="dd-item 
         
         
         
         ">
       <a href="/4-s3log/">
-           <b> 4. </b> Manage session logs
+           <b> 4. </b> Service Communication &amp; Discovery
           
             <i class="fas fa-check read-icon"></i>
           
@@ -727,13 +727,13 @@
  
   
     
-    <li data-nav-id="/4-s3log/4.2-creates3bucket/" title="Create S3 Bucket" class="dd-item 
+    <li data-nav-id="/4-s3log/4.2-creates3bucket/" title="Setting up API Gateway" class="dd-item 
         
         
         
         ">
       <a href="/4-s3log/4.2-creates3bucket/">
-           <b> 4.2 </b> Create S3 Bucket
+           <b> 4.2 </b> Setting up API Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -818,39 +818,13 @@
  
   
     
-    <li data-nav-id="/5-portfwd/" title="Port Forwarding" class="dd-item 
+    <li data-nav-id="/5-portfwd/" title="Clean up resources" class="dd-item 
         
         
         
         ">
       <a href="/5-portfwd/">
-           <b> 5. </b> Port Forwarding
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-cleanup/" title="Clean up resources" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/6-cleanup/">
-          <b>6. </b>Clean up resources
+           <b> 5. </b> Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -999,7 +973,7 @@
             
           
           
-            <a href='/'>Session Management</a> > Preparation 
+            <a href='/'>E-commerce Microservices on AWS</a> > CDK Infrastructure Setup
           
         
           
@@ -1014,6 +988,10 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#infrastructure-overview">Infrastructure Overview</a></li>
+        <li><a href="#cdk-project-structure">CDK Project Structure</a></li>
+        <li><a href="#key-benefits-of-cdk-for-microservices">Key Benefits of CDK for Microservices:</a></li>
         <li><a href="#content">Content</a></li>
       </ul>
     </li>
@@ -1034,7 +1012,7 @@
           
             <h1>
               
-              Preparation 
+              CDK Infrastructure Setup
             </h1>
           
 
@@ -1043,19 +1021,60 @@
 
 
 	
-<div class="notices info" ><p>You need to create 1 Linux instance on the public subnet and 1 Window instance on the private subnet to perform this lab.</p>
+<div class="notices info" ><p>In this section, we&rsquo;ll use AWS CDK (Cloud Development Kit) to define and deploy our microservices infrastructure as code. CDK allows us to define cloud resources using familiar programming languages and ensures consistent, repeatable deployments.</p>
 </div>
 
-<p>To learn how to create EC2 instances and VPCs with public/private subnets, you can refer to the lab:</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Before starting, ensure you have:</p>
 <ul>
-<li><a href="https://000004.awsstudygroup.com/en/">About Amazon EC2</a></li>
-<li><a href="https://000003.awsstudygroup.com/en/">Works with Amazon VPC</a></li>
+<li><strong>AWS CLI</strong>: Configured with appropriate permissions</li>
+<li><strong>Node.js</strong>: Version 16 or later</li>
+<li><strong>AWS CDK</strong>: Latest version installed (<code>npm install -g aws-cdk</code>)</li>
+<li><strong>Docker</strong>: For building container images</li>
+<li><strong>Basic TypeScript knowledge</strong>: CDK stacks will be written in TypeScript</li>
 </ul>
-<p>In order to use System Manager to manage our window instances in particular and our instances in general on AWS, we need to give permission to our instances to be able to work with System Manager. In this preparation, we will also proceed to create an IAM Role to grant permissions to instances that can work with System Manager.</p>
+<h3 id="infrastructure-overview">Infrastructure Overview</h3>
+<p>Our CDK application will create:</p>
+<ul>
+<li><strong>VPC with Public/Private Subnets</strong>: Network isolation for services</li>
+<li><strong>ECS Fargate Cluster</strong>: Serverless container hosting</li>
+<li><strong>ECR Repositories</strong>: Container image storage</li>
+<li><strong>API Gateway</strong>: HTTP API for service access</li>
+<li><strong>Service Discovery</strong>: AWS Cloud Map for inter-service communication</li>
+<li><strong>IAM Roles &amp; Policies</strong>: Secure access management</li>
+<li><strong>CloudWatch</strong>: Logging and monitoring</li>
+</ul>
+<h3 id="cdk-project-structure">CDK Project Structure</h3>
+<pre tabindex="0"><code>ecommerce-microservices-cdk/
+├── bin/
+│   └── app.ts                 # CDK App entry point
+├── lib/
+│   ├── network-stack.ts       # VPC, subnets, security groups
+│   ├── ecr-stack.ts          # Container repositories
+│   ├── ecs-stack.ts          # ECS cluster and services
+│   ├── api-gateway-stack.ts   # API Gateway configuration
+│   └── monitoring-stack.ts    # CloudWatch setup
+├── services/
+│   ├── product-service/       # Product microservice
+│   ├── order-service/         # Order microservice
+│   ├── payment-service/       # Payment microservice
+│   ├── inventory-service/     # Inventory microservice
+│   ├── supplier-service/      # Supplier microservice
+│   └── consumer-service/      # Consumer microservice
+├── cdk.json
+└── package.json
+</code></pre><h3 id="key-benefits-of-cdk-for-microservices">Key Benefits of CDK for Microservices:</h3>
+<ul>
+<li><strong>Infrastructure as Code</strong>: Version control your infrastructure</li>
+<li><strong>Type Safety</strong>: Catch errors at compile time</li>
+<li><strong>Reusable Constructs</strong>: Share infrastructure patterns</li>
+<li><strong>Cross-Stack References</strong>: Easy integration between services</li>
+<li><strong>Automated Rollbacks</strong>: Safe deployment practices</li>
+</ul>
 <h3 id="content">Content</h3>
 <ul>
-<li><a href="2.1-createec2/">Prepare VPC and EC2</a></li>
-<li><a href="2.2-createiamrole/">Create IAM Role</a></li>
+<li><a href="2.1-createec2/">Initialize CDK Project</a></li>
+<li><a href="2.2-createiamrole/">Setup IAM Roles and Policies</a></li>
 </ul>
 
 
@@ -1511,22 +1530,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
         
@@ -1536,10 +1539,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/1-introduce/" title="Introduction"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/1-introduce/" title="Introduction to Microservices Architecture"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-prerequiste/2.1-createec2/" title="Preparing VPC and EC2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-prerequiste/2.1-createec2/" title="Preparing Container Infrastructure" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1549,19 +1552,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1755014751"></script>
-    <script src="/js/perfect-scrollbar.min.js?1755014751"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1755014751"></script>
-    <script src="/js/jquery.sticky.js?1755014751"></script>
-    <script src="/js/featherlight.min.js?1755014751"></script>
-    <script src="/js/highlight.pack.js?1755014751"></script>
+    <script src="/js/clipboard.min.js?1755017725"></script>
+    <script src="/js/perfect-scrollbar.min.js?1755017725"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1755017725"></script>
+    <script src="/js/jquery.sticky.js?1755017725"></script>
+    <script src="/js/featherlight.min.js?1755017725"></script>
+    <script src="/js/highlight.pack.js?1755017725"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1755014751"></script>
-    <script src="/js/learn.js?1755014751"></script>
-    <script src="/js/hugo-learn.js?1755014751"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1755017725"></script>
+    <script src="/js/learn.js?1755017725"></script>
+    <script src="/js/hugo-learn.js?1755017725"></script>
 
-    <link href="/mermaid/mermaid.css?1755014751" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1755014751"></script>
+    <link href="/mermaid/mermaid.css?1755017725" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1755017725"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -2,19 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
-    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/"
-                />
-  </url><url>
     <loc>/3-accessibilitytoinstances/3.1-public-instance/</loc>
     <xhtml:link
                 rel="alternate"
@@ -49,6 +36,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/2-prerequiste/2.1-createec2/2.1.1-createvpc/"
+                />
+  </url><url>
+    <loc>/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
                 />
   </url><url>
     <loc>/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/</loc>
@@ -99,6 +98,18 @@
                 href="/4-s3log/4.1-updateiamrole/"
                 />
   </url><url>
+    <loc>/2-prerequiste/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-prerequiste/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-prerequiste/"
+                />
+  </url><url>
     <loc>/3-accessibilitytoinstances/3.2-private-instance/</loc>
     <xhtml:link
                 rel="alternate"
@@ -147,18 +158,6 @@
                 href="/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/"
                 />
   </url><url>
-    <loc>/4-s3log/4.2-creates3bucket/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-s3log/4.2-creates3bucket/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-s3log/4.2-creates3bucket/"
-                />
-  </url><url>
     <loc>/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/</loc>
     <xhtml:link
                 rel="alternate"
@@ -171,28 +170,16 @@
                 href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/"
                 />
   </url><url>
-    <loc>/2-prerequiste/</loc>
+    <loc>/4-s3log/4.2-creates3bucket/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/"
+                href="/vi/4-s3log/4.2-creates3bucket/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/"
-                />
-  </url><url>
-    <loc>/3-accessibilitytoinstances/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-accessibilitytoinstances/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-accessibilitytoinstances/"
+                href="/4-s3log/4.2-creates3bucket/"
                 />
   </url><url>
     <loc>/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/</loc>
@@ -243,6 +230,18 @@
                 href="/4-s3log/4.3-creategwes3/"
                 />
   </url><url>
+    <loc>/3-accessibilitytoinstances/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-accessibilitytoinstances/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-accessibilitytoinstances/"
+                />
+  </url><url>
     <loc>/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/</loc>
     <xhtml:link
                 rel="alternate"
@@ -253,18 +252,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/"
-                />
-  </url><url>
-    <loc>/4-s3log/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/4-s3log/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/4-s3log/"
                 />
   </url><url>
     <loc>/4-s3log/4.4-configsessionlogs/</loc>
@@ -279,16 +266,16 @@
                 href="/4-s3log/4.4-configsessionlogs/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.1-createec2/2.1.5-createec2linux/</loc>
+    <loc>/4-s3log/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/"
+                href="/vi/4-s3log/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/"
+                href="/4-s3log/"
                 />
   </url><url>
     <loc>/5-portfwd/</loc>
@@ -303,17 +290,16 @@
                 href="/5-portfwd/"
                 />
   </url><url>
-    <loc>/6-cleanup/</loc>
-    <lastmod>1970-01-01T07:33:42+07:00</lastmod>
+    <loc>/2-prerequiste/2.1-createec2/2.1.5-createec2linux/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-cleanup/"
+                href="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-cleanup/"
+                href="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/"
                 />
   </url><url>
     <loc>/2-prerequiste/2.1-createec2/2.1.6-createec2windows/</loc>
@@ -327,6 +313,12 @@
                 hreflang="en"
                 href="/2-prerequiste/2.1-createec2/2.1.6-createec2windows/"
                 />
+  </url><url>
+    <loc>/cdk-setup-guide/</loc>
+    <priority>0</priority>
+  </url><url>
+    <loc>/productservice-implementation/</loc>
+    <priority>0</priority>
   </url><url>
     <loc>/categories/</loc>
     <xhtml:link

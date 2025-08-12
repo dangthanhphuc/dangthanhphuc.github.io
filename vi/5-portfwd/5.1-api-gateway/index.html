@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="js csstransforms3d">
+<html lang="vi" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Create Private Subnet :: AWS System Manager</title>
+    <title>Thiết lập API Gateway :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1755017725" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1755017725" rel="stylesheet">
-    <link href="/css/hybrid.css?1755017725" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1755017725" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1755017725" rel="stylesheet">
-    <link href="/css/auto-complete.css?1755017725" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1755017725" rel="stylesheet">
-    <link href="/css/theme.css?1755017725" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1755017725" rel="stylesheet">
+    <link href="/css/nucleus.css?1755017405" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1755017405" rel="stylesheet">
+    <link href="/css/hybrid.css?1755017405" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1755017405" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1755017405" rel="stylesheet">
+    <link href="/css/auto-complete.css?1755017405" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1755017405" rel="stylesheet">
+    <link href="/css/theme.css?1755017405" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1755017405" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1755017725" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1755017405" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1755017725"></script>
+    <script src="/js/jquery-3.3.1.min.js?1755017405"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">
+  <body class="" data-url="/vi/5-portfwd/5.1-api-gateway/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1755017725"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1755017725"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1755017405"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1755017405"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1755017725"></script>
+<script type="text/javascript" src="/js/search.js?1755017405"></script>
 
     
   </div>
@@ -82,13 +82,13 @@
  
   
     
-    <li data-nav-id="/1-introduce/" title="Introduction to Microservices Architecture" class="dd-item 
+    <li data-nav-id="/vi/1-introduce/" title="Giới thiệu về Kiến trúc Microservices" class="dd-item 
         
         
         
         ">
-      <a href="/1-introduce/">
-           <b> 1. </b> Introduction to Microservices Architecture
+      <a href="/vi/1-introduce/">
+           <b> 1. </b> Giới thiệu về Kiến trúc Microservices
           
             <i class="fas fa-check read-icon"></i>
           
@@ -108,13 +108,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/" title="CDK Infrastructure Setup" class="dd-item 
-        parent
+    <li data-nav-id="/vi/2-prerequiste/" title="Thiết lập Hạ tầng với CDK" class="dd-item 
+        
         
         
         ">
-      <a href="/2-prerequiste/">
-           <b> 2. </b> CDK Infrastructure Setup
+      <a href="/vi/2-prerequiste/">
+           <b> 2. </b> Thiết lập Hạ tầng với CDK
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +139,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/" title="Preparing Container Infrastructure" class="dd-item 
-        parent
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/" title="Chuẩn bị VPC và EC2" class="dd-item 
+        
         
         
         ">
-      <a href="/2-prerequiste/2.1-createec2/">
-           <b> 2.1 </b> Preparing Container Infrastructure
+      <a href="/vi/2-prerequiste/2.1-createec2/">
+           <b> 2.1 </b> Chuẩn bị VPC và EC2
           
             <i class="fas fa-check read-icon"></i>
           
@@ -170,13 +170,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.1-createvpc/" title="Create VPC" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.1-createvpc/" title="Tạo VPC " class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.1-createec2/2.1.1-createvpc/">
-           <b> 2.1.1 </b> Create VPC
+      <a href="/vi/2-prerequiste/2.1-createec2/2.1.1-createvpc/">
+           <b> 2.1.1 </b> Tạo VPC 
           
             <i class="fas fa-check read-icon"></i>
           
@@ -198,13 +198,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/" title="Create Public Subnet" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/" title="Tạo Public subnet" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/">
-           <b> 2.1.2 </b> Create Public Subnet
+      <a href="/vi/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/">
+           <b> 2.1.2 </b> Tạo Public subnet
           
             <i class="fas fa-check read-icon"></i>
           
@@ -226,97 +226,636 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/" title="Create Private Subnet" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/" title="Tạo Private subnet" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">
+           <b> 2.1.3 </b> Tạo Private subnet
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Tạo các security group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/">
+           <b> 2.1.4 </b> Tạo các security group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Tạo Public Linux EC2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">
+           <b> 2.1.5 </b> Tạo Public Linux EC2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/" title="Tạo Private Windows EC2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/">
+           <b> 2.1.6 </b> Tạo Private Windows EC2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.2-createiamrole/" title="Tạo IAM Role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.2-createiamrole/">
+           <b> 2.2 </b> Tạo IAM Role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/" title="Triển khai Core Services" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/">
+           <b> 3. </b> Triển khai Core Services
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.1-public-instance/" title="Kết nối đến máy chủ Public" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.1-public-instance/">
+           <b> 3.1. </b> Kết nối đến máy chủ Public
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/" title="Tạo kết nối đến máy chủ EC2 Private" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/">
+           <b> 3.2. </b> Tạo kết nối đến máy chủ EC2 Private
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/" title="Kích hoạt DNS hostnames" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/">
+           <b> 3.2.1 </b> Kích hoạt DNS hostnames
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/" title="Tạo VPC Endpoint" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/">
+           <b> 3.2.2 </b> Tạo VPC Endpoint
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/" title="Tạo Endpoint ssm" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/">
+           <b> 3.2.2.1 </b> Tạo Endpoint ssm
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/" title="Tạo Endpoint ssmmessages" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/">
+           <b> 3.2.2.2 </b> Tạo Endpoint ssmmessages
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/" title="Tạo Endpoint ec2messages" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/">
+           <b> 3.2.2.3 </b> Tạo Endpoint ec2messages
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/" title="Kết nối EC2 Private" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/">
+           <b> 3.2.3 </b> Kết nối EC2 Private
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-s3log/" title="Giao tiếp &amp; Service Discovery" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-s3log/">
+           <b> 4. </b> Giao tiếp &amp; Service Discovery
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-s3log/4.1-updateiamrole/" title="Cập nhật IAM Role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-s3log/4.1-updateiamrole/">
+           <b> 4.1 </b> Cập nhật IAM Role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-s3log/4.2-creates3bucket/" title="Tạo S3 Bucket" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-s3log/4.2-creates3bucket/">
+           <b> 4.2 </b> Tạo S3 Bucket
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-s3log/4.3-creategwes3/" title="Tạo S3 Gateway endpoint" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-s3log/4.3-creategwes3/">
+           <b> 4.3 </b> Tạo S3 Gateway endpoint
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-s3log/4.4-configsessionlogs/" title="Theo dõi session logs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-s3log/4.4-configsessionlogs/">
+           <b> 4.4 </b> Theo dõi session logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-portfwd/" title="Dọn dẹp tài nguyên" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/vi/5-portfwd/">
+           <b> 5. </b> Dọn dẹp tài nguyên
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-portfwd/5.1-api-gateway/" title="Thiết lập API Gateway" class="dd-item 
         parent
         active
         
         ">
-      <a href="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">
-           <b> 2.1.3 </b> Create Private Subnet
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Create security groups" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/">
-           <b> 2.1.4 </b> Create security groups
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Create Public instance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">
-           <b> 2.1.5 </b> Create Public instance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-prerequiste/2.1-createec2/2.1.6-createec2windows/" title="Create Private Instance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-prerequiste/2.1-createec2/2.1.6-createec2windows/">
-           <b> 2.1.6 </b> Create Private Instance
+      <a href="/vi/5-portfwd/5.1-api-gateway/">
+           <b> 5.1 </b> Thiết lập API Gateway
           
             <i class="fas fa-check read-icon"></i>
           
@@ -331,505 +870,6 @@
           
         
         </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/2-prerequiste/2.2-createiamrole/" title="Create IAM Role" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/2-prerequiste/2.2-createiamrole/">
-           <b> 2.2 </b> Create IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-accessibilitytoinstances/" title="Deploy Core Services" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-accessibilitytoinstances/">
-           <b> 3. </b> Deploy Core Services
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-accessibilitytoinstances/3.1-public-instance/" title="Connect to Public Instance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-accessibilitytoinstances/3.1-public-instance/">
-           <b> 3.1. </b> Connect to Public Instance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/" title="Connect to Private instance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/">
-           <b> 3.2. </b> Connect to Private instance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/" title="Enable DNS hostnames" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/">
-           <b> 3.2.1 </b> Enable DNS hostnames
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/" title="Create VPC Endpoint" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/">
-           <b> 3.2.2 </b> Create VPC Endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/" title="Create Endpoint ssm" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/">
-           <b> 3.2.2.1 </b> Create Endpoint ssm
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/" title="Create Endpoint ssmmessages" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/">
-           <b> 3.2.2.2 </b> Create Endpoint ssmmessages
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/" title="Create Endpoint ec2messages" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/">
-           <b> 3.2.2.3 </b> Create Endpoint ec2messages
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/" title="Connect to instance" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/">
-           <b> 3.2.3 </b> Connect to instance
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-s3log/" title="Service Communication &amp; Discovery" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-s3log/">
-           <b> 4. </b> Service Communication &amp; Discovery
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-s3log/4.1-updateiamrole/" title="Update IAM Role" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-s3log/4.1-updateiamrole/">
-           <b> 4.1 </b> Update IAM Role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-s3log/4.2-creates3bucket/" title="Setting up API Gateway" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-s3log/4.2-creates3bucket/">
-           <b> 4.2 </b> Setting up API Gateway
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-s3log/4.3-creategwes3/" title="Create S3 Gateway endpoint" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-s3log/4.3-creategwes3/">
-           <b> 4.3 </b> Create S3 Gateway endpoint
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/4-s3log/4.4-configsessionlogs/" title="Monitor session logs" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/4-s3log/4.4-configsessionlogs/">
-           <b> 4.4 </b> Monitor session logs
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/5-portfwd/" title="Clean up resources" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/5-portfwd/">
-           <b> 5. </b> Clean up resources
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
               
     </li>
   
@@ -871,7 +911,7 @@
                   
                     
                     
-                      <option id="en" value="/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/" selected>English</option>
+                      <option id="en" value="/5-portfwd/5.1-api-gateway/">English</option>
                     
                   
               
@@ -885,7 +925,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">Tiếng Việt</option>
+                      <option id="vi" value="/vi/5-portfwd/5.1-api-gateway/" selected>Tiếng Việt</option>
                     
                   
               
@@ -977,13 +1017,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>E-commerce Microservices on AWS</a> > <a href='/2-prerequiste/'>CDK Infrastructure Setup</a> > <a href='/2-prerequiste/2.1-createec2/'>Preparing Container Infrastructure</a> > Create Private Subnet
-          
-        
+            <a href='/vi/'>E-commerce Microservices trên AWS</a> > <a href='/vi/5-portfwd/'>Dọn dẹp tài nguyên</a> > Thiết lập API Gateway
           
         
           
@@ -998,9 +1032,15 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#cấu-hình-api-gateway-cho-e-commerce-microservices">Cấu hình API Gateway cho E-commerce Microservices</a>
       <ul>
-        <li></li>
+        <li><a href="#tổng-quan-kiến-trúc">Tổng quan Kiến trúc</a></li>
+        <li><a href="#các-route-của-api-gateway">Các Route của API Gateway</a></li>
+        <li><a href="#các-bước-triển-khai">Các bước Triển khai</a></li>
+        <li><a href="#biến-môi-trường">Biến Môi trường</a></li>
+        <li><a href="#kiểm-thử-api-gateway">Kiểm thử API Gateway</a></li>
+        <li><a href="#giám-sát-và-logging">Giám sát và Logging</a></li>
+        <li><a href="#best-practices-về-bảo-mật">Best Practices về Bảo mật</a></li>
       </ul>
     </li>
   </ul>
@@ -1020,7 +1060,7 @@
           
             <h1>
               
-              Create Private Subnet
+              Thiết lập API Gateway
             </h1>
           
 
@@ -1028,30 +1068,135 @@
 
 
 
-	<h4 id="create-private-subnet">Create Private Subnet</h4>
+	<h2 id="cấu-hình-api-gateway-cho-e-commerce-microservices">Cấu hình API Gateway cho E-commerce Microservices</h2>
+<p>Trong phần này, chúng ta sẽ cấu hình Amazon API Gateway làm điểm vào duy nhất cho hệ thống microservices thương mại điện tử. API Gateway sẽ định tuyến requests đến các microservices phù hợp và cung cấp xác thực, phân quyền và giám sát tập trung.</p>
+<h3 id="tổng-quan-kiến-trúc">Tổng quan Kiến trúc</h3>
+<p>API Gateway của chúng ta sẽ xử lý requests cho tất cả microservices:</p>
+<pre tabindex="0"><code>Client → API Gateway → [Supplier Service | Consumer Service | Inventory Service | Product Service | Payment Service | Order Service]
+</code></pre><h3 id="các-route-của-api-gateway">Các Route của API Gateway</h3>
+<h4 id="1-routes-cho-supplier-service">1. Routes cho Supplier Service</h4>
+<ul>
+<li><code>GET /api/v1/suppliers</code> - Liệt kê tất cả nhà cung cấp</li>
+<li><code>GET /api/v1/suppliers/{id}</code> - Lấy chi tiết nhà cung cấp</li>
+<li><code>POST /api/v1/suppliers</code> - Tạo nhà cung cấp mới</li>
+<li><code>PUT /api/v1/suppliers/{id}</code> - Cập nhật nhà cung cấp</li>
+<li><code>DELETE /api/v1/suppliers/{id}</code> - Xóa nhà cung cấp</li>
+</ul>
+<h4 id="2-routes-cho-consumer-service">2. Routes cho Consumer Service</h4>
+<ul>
+<li><code>GET /api/v1/consumers</code> - Liệt kê khách hàng</li>
+<li><code>GET /api/v1/consumers/{id}</code> - Lấy hồ sơ khách hàng</li>
+<li><code>POST /api/v1/consumers</code> - Đăng ký khách hàng mới</li>
+<li><code>PUT /api/v1/consumers/{id}</code> - Cập nhật hồ sơ khách hàng</li>
+</ul>
+<h4 id="3-routes-cho-product-service">3. Routes cho Product Service</h4>
+<ul>
+<li><code>GET /api/v1/products</code> - Liệt kê sản phẩm với phân trang</li>
+<li><code>GET /api/v1/products/{id}</code> - Lấy chi tiết sản phẩm</li>
+<li><code>GET /api/v1/products/category/{category}</code> - Lấy sản phẩm theo danh mục</li>
+<li><code>POST /api/v1/products</code> - Tạo sản phẩm mới (chỉ admin)</li>
+</ul>
+<h4 id="4-routes-cho-inventory-service">4. Routes cho Inventory Service</h4>
+<ul>
+<li><code>GET /api/v1/inventory/{productId}</code> - Kiểm tra tồn kho sản phẩm</li>
+<li><code>POST /api/v1/inventory/reserve</code> - Đặt trước tồn kho</li>
+<li><code>POST /api/v1/inventory/release</code> - Giải phóng tồn kho đã đặt</li>
+</ul>
+<h4 id="5-routes-cho-order-service">5. Routes cho Order Service</h4>
+<ul>
+<li><code>GET /api/v1/orders</code> - Lấy đơn hàng của người dùng</li>
+<li><code>GET /api/v1/orders/{id}</code> - Lấy chi tiết đơn hàng</li>
+<li><code>POST /api/v1/orders</code> - Tạo đơn hàng mới</li>
+<li><code>PUT /api/v1/orders/{id}/status</code> - Cập nhật trạng thái đơn hàng</li>
+</ul>
+<h4 id="6-routes-cho-payment-service">6. Routes cho Payment Service</h4>
+<ul>
+<li><code>POST /api/v1/payments</code> - Xử lý thanh toán</li>
+<li><code>GET /api/v1/payments/{id}</code> - Lấy trạng thái thanh toán</li>
+<li><code>POST /api/v1/payments/{id}/refund</code> - Xử lý hoàn tiền</li>
+</ul>
+<h3 id="các-bước-triển-khai">Các bước Triển khai</h3>
+<h4 id="bước-1-tạo-api-gateway">Bước 1: Tạo API Gateway</h4>
 <ol>
-<li>Click <strong>Subnets</strong>.
+<li>Truy cập <a href="https://console.aws.amazon.com/apigateway/">API Gateway Console</a></li>
+<li>Nhấp <strong>Create API</strong></li>
+<li>Chọn <strong>REST API</strong> → <strong>Build</strong></li>
+<li>Đặt <strong>API name</strong>: <code>ecommerce-microservices-api</code></li>
+<li>Đặt <strong>Description</strong>: <code>API Gateway for E-commerce Microservices</code></li>
+<li>Nhấp <strong>Create API</strong></li>
+</ol>
+<h4 id="bước-2-cấu-hình-cors">Bước 2: Cấu hình CORS</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#e6db74">&#34;origin&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;*&#34;</span>,
+  <span style="color:#e6db74">&#34;methods&#34;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;GET&#34;</span>, <span style="color:#e6db74">&#34;POST&#34;</span>, <span style="color:#e6db74">&#34;PUT&#34;</span>, <span style="color:#e6db74">&#34;DELETE&#34;</span>, <span style="color:#e6db74">&#34;OPTIONS&#34;</span>],
+  <span style="color:#e6db74">&#34;headers&#34;</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#34;Content-Type&#34;</span>, <span style="color:#e6db74">&#34;Authorization&#34;</span>, <span style="color:#e6db74">&#34;X-Amz-Date&#34;</span>, <span style="color:#e6db74">&#34;X-Api-Key&#34;</span>]
+}
+</code></pre></div><h4 id="bước-3-tạo-cấu-trúc-resource">Bước 3: Tạo Cấu trúc Resource</h4>
+<p>Tạo cây thư mục resource như sau:</p>
+<pre tabindex="0"><code>/
+├── api
+    └── v1
+        ├── suppliers
+        ├── consumers  
+        ├── products
+        ├── inventory
+        ├── orders
+        └── payments
+</code></pre><h4 id="bước-4-cấu-hình-service-integration">Bước 4: Cấu hình Service Integration</h4>
+<p>Cho mỗi service, cấu hình:</p>
 <ul>
-<li>Click <strong>Create subnet</strong>.</li>
+<li><strong>Integration Type</strong>: HTTP Proxy</li>
+<li><strong>HTTP Method</strong>: ANY</li>
+<li><strong>Endpoint URL</strong>: <code>http://{service-load-balancer-dns}/{proxy}</code></li>
+<li><strong>Content Handling</strong>: Passthrough</li>
 </ul>
-</li>
+<h4 id="bước-5-thiết-lập-authentication">Bước 5: Thiết lập Authentication</h4>
+<p>Cấu hình AWS Cognito User Pool:</p>
+<ol>
+<li>Tạo Cognito User Pool cho xác thực khách hàng</li>
+<li>Tạo App Client cho API access</li>
+<li>Cấu hình API Gateway Authorizer</li>
+<li>Áp dụng authorizer cho các endpoints được bảo vệ</li>
 </ol>
-<p><img src="/images/2.prerequisite/017-createsubnet.png" alt="VPC"></p>
-<ol start="2">
-<li>At the <strong>Create subnet</strong> page.
+<h3 id="biến-môi-trường">Biến Môi trường</h3>
+<p>Thiết lập các biến môi trường sau:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">API_GATEWAY_URL<span style="color:#f92672">=</span>https://your-api-id.execute-api.region.amazonaws.com/prod
+COGNITO_USER_POOL_ID<span style="color:#f92672">=</span>your-user-pool-id
+COGNITO_CLIENT_ID<span style="color:#f92672">=</span>your-client-id
+</code></pre></div><h3 id="kiểm-thử-api-gateway">Kiểm thử API Gateway</h3>
+<p>Sử dụng các lệnh curl sau để kiểm thử endpoints:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Kiểm thử danh sách sản phẩm (endpoint công khai)</span>
+curl -X GET <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>API_GATEWAY_URL<span style="color:#e6db74">}</span><span style="color:#e6db74">/api/v1/products&#34;</span>
+
+<span style="color:#75715e"># Kiểm thử tạo đơn hàng (endpoint cần xác thực)</span>
+curl -X POST <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">${</span>API_GATEWAY_URL<span style="color:#e6db74">}</span><span style="color:#e6db74">/api/v1/orders&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  -H <span style="color:#e6db74">&#34;Authorization: Bearer </span><span style="color:#e6db74">${</span>ACCESS_TOKEN<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  -d <span style="color:#e6db74">&#39;{
+</span><span style="color:#e6db74">    &#34;customerId&#34;: &#34;12345&#34;,
+</span><span style="color:#e6db74">    &#34;items&#34;: [
+</span><span style="color:#e6db74">      {
+</span><span style="color:#e6db74">        &#34;productId&#34;: &#34;prod-001&#34;,
+</span><span style="color:#e6db74">        &#34;quantity&#34;: 2,
+</span><span style="color:#e6db74">        &#34;price&#34;: 29.99
+</span><span style="color:#e6db74">      }
+</span><span style="color:#e6db74">    ]
+</span><span style="color:#e6db74">  }&#39;</span>
+</code></pre></div><h3 id="giám-sát-và-logging">Giám sát và Logging</h3>
+<p>Kích hoạt các tính năng sau cho API Gateway:</p>
 <ul>
-<li>In the <strong>VPC ID</strong> section, click <strong>Lab VPC</strong>.</li>
-<li>In the <strong>Subnet name</strong> field, enter <strong>Lab Private Subnet</strong>.</li>
-<li>In the <strong>Availability Zone</strong> section, select the first Availability zone.</li>
-<li>In the field <strong>IPv4 CIRD block</strong> enter <strong>10.10.2.0/24</strong>.</li>
+<li><strong>CloudWatch Logs</strong>: Logging chi tiết request/response</li>
+<li><strong>CloudWatch Metrics</strong>: Số lượng request, độ trễ, tỷ lệ lỗi</li>
+<li><strong>AWS X-Ray</strong>: Distributed tracing qua các microservices</li>
 </ul>
-</li>
+<h3 id="best-practices-về-bảo-mật">Best Practices về Bảo mật</h3>
+<ol>
+<li><strong>API Keys</strong>: Cho rate limiting và theo dõi usage</li>
+<li><strong>WAF Integration</strong>: Bảo vệ chống các cuộc tấn công phổ biến</li>
+<li><strong>Resource-based Policies</strong>: Kiểm soát truy cập chi tiết</li>
+<li><strong>Request Validation</strong>: Xác thực parameters và body của request</li>
+<li><strong>Response Caching</strong>: Cải thiện hiệu suất và giảm tải backend</li>
 </ol>
-<p><img src="/images/2.prerequisite/018-createsubnet.png" alt="VPC"></p>
-<ol start="3">
-<li>Scroll to the bottom of the page, click <strong>Create subnet</strong>.</li>
-</ol>
-<p>The next step is to create the necessary security groups for the lab.</p>
 
 
 
@@ -1111,7 +1256,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1127,7 +1271,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1142,9 +1285,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1178,7 +1318,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1194,9 +1333,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1500,6 +1636,23 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
                 
                 
 
@@ -1507,6 +1660,9 @@
                     
                     
 
+                    
+            
+        
                     
             
         
@@ -1520,10 +1676,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/" title="Create Public Subnet"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/5-portfwd/" title="Dọn dẹp tài nguyên"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Create security groups" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-introduce/" title="Giới thiệu về Kiến trúc Microservices" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1533,19 +1689,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1755017725"></script>
-    <script src="/js/perfect-scrollbar.min.js?1755017725"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1755017725"></script>
-    <script src="/js/jquery.sticky.js?1755017725"></script>
-    <script src="/js/featherlight.min.js?1755017725"></script>
-    <script src="/js/highlight.pack.js?1755017725"></script>
+    <script src="/js/clipboard.min.js?1755017405"></script>
+    <script src="/js/perfect-scrollbar.min.js?1755017405"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1755017405"></script>
+    <script src="/js/jquery.sticky.js?1755017405"></script>
+    <script src="/js/featherlight.min.js?1755017405"></script>
+    <script src="/js/highlight.pack.js?1755017405"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1755017725"></script>
-    <script src="/js/learn.js?1755017725"></script>
-    <script src="/js/hugo-learn.js?1755017725"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1755017405"></script>
+    <script src="/js/learn.js?1755017405"></script>
+    <script src="/js/hugo-learn.js?1755017405"></script>
 
-    <link href="/mermaid/mermaid.css?1755017725" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1755017725"></script>
+    <link href="/mermaid/mermaid.css?1755017405" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1755017405"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
